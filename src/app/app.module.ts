@@ -3,28 +3,47 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { GeolocationService } from '../services/geolocation.service';
+
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { InicioPage} from '../pages/inicio/inicio';
+import { MapaPage} from '../pages/mapa/mapa';
+import { CafeteriaPage} from '../pages/cafeteria/cafeteria';
+import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
+import { MenuPage } from '../pages/menu/menu';
+import { PlatoPage } from '../pages/plato/plato';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    InicioPage,
+    MapaPage,
+    CafeteriaPage,
+    LaboratorioPage,
+    MenuPage,
+    PlatoPage
+
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    InicioPage,
+    MapaPage,
+    CafeteriaPage,
+    LaboratorioPage,
+    MenuPage,
+    PlatoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GeolocationService
   ]
 })
 export class AppModule {}
