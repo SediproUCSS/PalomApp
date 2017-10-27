@@ -13,6 +13,7 @@ import { CafeteriaPage} from '../pages/cafeteria/cafeteria';
 import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
 import { MenuPage } from '../pages/menu/menu';
 import { PlatoPage } from '../pages/plato/plato';
+import { LocalPage } from '../pages/local/local';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PlatoPage } from '../pages/plato/plato';
     CafeteriaPage,
     LaboratorioPage,
     MenuPage,
-    PlatoPage
+    PlatoPage,
+    LocalPage
 
   ],
   imports: [
@@ -37,7 +39,8 @@ import { PlatoPage } from '../pages/plato/plato';
     CafeteriaPage,
     LaboratorioPage,
     MenuPage,
-    PlatoPage
+    PlatoPage,
+    LocalPage
   ],
   providers: [
     StatusBar,

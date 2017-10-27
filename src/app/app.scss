@@ -19,3 +19,31 @@
     padding-left:1em;
     
 }
+.card-background-page {
+    
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
+    
+      .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #FFFFFF;
+        -webkit-text-stroke: 2px #000000;
+        font-family: fantasy;
+      }
+    
+      .card-subtitle {
+        font-size: 2.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #FFFFFF;
+        -webkit-text-stroke: 2px #000000;
+        font-family: fantasy;
+      }
+    }
