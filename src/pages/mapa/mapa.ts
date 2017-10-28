@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GoogleMap, GoogleMapsEvent, GoogleMapsLatLng} from 'ionic-native';
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker
+ } from '@ionic-native/google-maps';
 import { GeolocationService } from '../../services/geolocation.service';
 
 
@@ -17,46 +25,53 @@ import { GeolocationService } from '../../services/geolocation.service';
   templateUrl: 'mapa.html',
 })
 export class MapaPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams ,public geolocator:GeolocationService) {
-  }
+  map: GoogleMap;
+  mapElement: HTMLElement;
+  constructor(private googleMaps: GoogleMaps) { }
 
   ionViewDidLoad() {
-    //obtener ubicacion del usuario para centrar ahi el mapa
-    this.geolocator.get().then((result)=>{
-
-      //cargar mapa
-      this.LoadMap(result.coords.latitude,result.coords.longitude);
-      console.log(result);
-
-
-    }).catch((err)=>console.log(err));
+   this.loadMap();
   }
 
-  LoadMap(lat,lng){
+ loadMap() {
+    this.mapElement = document.getElementById('map');
 
-    let location: GoogleMapsLatLng= new GoogleMapsLatLng(lat,lng);
-
-    new GoogleMap("map",{
-      'controls':{
-        'compass':true,
-        'myLocationButton':true,
-        'indoorPicker':true,
-        'zoom':true
-      },
-      'gestures':{
-        'scroll':true,
-        'tilt':true,
-        'rotate':true,
-        'zoom':true
-      },
-      'camera':{
-        'latLng':location,
-        'tilt':30,
-        'zoom':15,
-        'bearing':50
+    let mapOptions: GoogleMapOptions = {
+      camera: {
+        target: {
+          lat: 43.0741904,
+          lng: -89.3809802
+        },
+        zoom: 18,
+        tilt: 30
       }
-    })
-  }
+    };
 
+    this.map = new GoogleMap(this.mapElement, mapOptions);
+
+    // Wait the MAP_READY before using any methods.
+    this.map.one(GoogleMapsEvent.MAP_READY)
+      .then((result) => {
+        console.log(result);
+
+        // Now you can use all methods safely.
+        this.map.addMarker({
+            title: 'Ionic',
+            icon: 'blue',
+            animation: 'DROP',
+            position: {
+              lat: 43.0741904,
+              lng: -89.3809802
+            }
+          })
+          .then(marker => {
+            marker.on(GoogleMapsEvent.MARKER_CLICK)
+              .subscribe(() => {
+                alert('clicked');
+              });
+          });
+
+      });
+  }
+  
 }

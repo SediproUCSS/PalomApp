@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GeolocationService } from '../services/geolocation.service';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 
 import { MyApp } from './app.component';
@@ -46,7 +47,8 @@ import { LocalPage } from '../pages/local/local';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GeolocationService
+    GeolocationService,
+    GoogleMaps
   ]
 })
 export class AppModule {}
