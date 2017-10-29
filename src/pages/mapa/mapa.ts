@@ -39,8 +39,8 @@ export class MapaPage {
     let mapOptions: GoogleMapOptions = {
       camera: {
         target: {
-          lat: 43.0741904,
-          lng: -89.3809802
+          lat: -11.999976371038699,
+          lng: -77.06377984955907
         },
         zoom: 18,
         tilt: 30
@@ -56,12 +56,12 @@ export class MapaPage {
 
         // Now you can use all methods safely.
         this.map.addMarker({
-            title: 'Ionic',
-            icon: 'blue',
+            title: 'Local Central UCSS',
+            icon: 'red',
             animation: 'DROP',
             position: {
-              lat: 43.0741904,
-              lng: -89.3809802
+              lat: -11.999976371038699,
+              lng: -77.06377984955907
             }
           })
           .then(marker => {
