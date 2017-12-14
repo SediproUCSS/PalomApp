@@ -16,33 +16,22 @@
 </ion-header>
 
 
-<ion-content padding>
-  <div class="user">
+<ion-content padding >
+  <div class="plato">
     <img src="./assets/imgPlato/plato.jpg">
     <h1>MENU LUNES</h1>
   </div>
   <ion-list>
 
-    <ion-item (click)="goToplato(1)">
-      <ion-thumbnail item-start>
-      <img src="./assets/imgPlato/plato.jpg">
+    <ion-item *ngFor="let plato of list" >
+      <ion-thumbnail>
+      <img src="{{ plato.img_plato }}">
       </ion-thumbnail>
-      <h2>ARROZ CON POLLO</h2>
-    </ion-item>
-
-    <ion-item (click)="goToplato(2)">
-      <ion-thumbnail item-start>
-      <img src="./assets/imgPlato/plato.jpg">
-      </ion-thumbnail>
-      <h2>PAPA A LA HUANCAYNA</h2>
-    </ion-item>
-
-    <ion-item (click)="goToplato(3)">
-      <ion-thumbnail item-start>
-      <img src="./assets/imgPlato/plato.jpg">
-      </ion-thumbnail>
-      <h2>SECO DE CARNE</h2>
+      <h2>{{ plato.nom_plato }}</h2>
+      <p>{{ plato.descripcion }}</p>
     </ion-item>
 
   </ion-list>
 </ion-content>
+
+

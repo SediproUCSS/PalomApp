@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { PlatoPage } from '../plato/plato';
+import { Platos } from '../../providers/platos/platos';
 
 /**
  * Generated class for the MenuPage page.
@@ -17,11 +18,17 @@ import { PlatoPage } from '../plato/plato';
 })
 export class MenuPage {
   public userID:number;
+  public list: any;
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,users: Platos) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
+    users.getListPlato().then(results=>{
+      console.log(results);
+      this.list=results;
+    }).catch(err=>{
+      console.log(err);
+    });
   }
 
   goToplato(menuID){
