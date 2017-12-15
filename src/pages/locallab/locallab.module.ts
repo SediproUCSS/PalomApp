@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { Local1Page } from './local1';
+import { LocallabPage } from './locallab';
 
 @NgModule({
   declarations: [
-    Local1Page,
+    LocallabPage,
   ],
   imports: [
-    IonicPageModule.forChild(Local1Page),
+    IonicPageModule.forChild(LocallabPage),
   ],
 })
-export class Local1PageModule {}
+export class LocallabPageModule {}

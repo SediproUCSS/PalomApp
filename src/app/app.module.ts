@@ -16,7 +16,7 @@ import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
 import { MenuPage } from '../pages/menu/menu';
 import { PlatoPage } from '../pages/plato/plato';
 import { LocalPage } from '../pages/local/local';
-import { Local1Page } from '../pages/local1/local1';
+import { LocallabPage } from '../pages/locallab/locallab';
 import { Users } from '../providers/users/users';
 import { Platos } from '../providers/platos/platos';
 
@@ -30,7 +30,7 @@ import { Platos } from '../providers/platos/platos';
     MenuPage,
     PlatoPage,
     LocalPage,
-    Local1Page
+    LocallabPage
 
   ],
   imports: [
@@ -48,7 +48,7 @@ import { Platos } from '../providers/platos/platos';
     MenuPage,
     PlatoPage,
     LocalPage,
-    Local1Page
+    LocallabPage
   ],
   providers: [
     StatusBar,

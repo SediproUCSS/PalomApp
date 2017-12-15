@@ -29,7 +29,7 @@ export class LocalPage {
     }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LocalPage');
+    console.log('se cargo el local');
   }
 
 }

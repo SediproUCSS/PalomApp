@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LaboratorioPage } from '../laboratorio/laboratorio';
 
 /**
- * Generated class for the Local1Page page.
+ * Generated class for the LocallabPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,14 +11,12 @@ import { LaboratorioPage } from '../laboratorio/laboratorio';
 
 @IonicPage()
 @Component({
-  selector: 'page-local1',
-  templateUrl: 'local1.html',
+  selector: 'page-locallab',
+  templateUrl: 'locallab.html',
 })
-export class Local1Page {
-
+export class LocallabPage {
   public userID:number;
   
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
@@ -28,8 +26,8 @@ export class Local1Page {
     this.navCtrl.push(LaboratorioPage, { laboratorioID:laboratorioID });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Local1Page');
-  }
+ionViewDidLoad() {
+  console.log('se cargo el local');
+}
 
 }
