@@ -17,6 +17,92 @@
 
 
 <ion-content padding>
-    <h1>LABORATORIO </h1>
-    <p> </p>
+    <h1>LABORATORIO: </h1>
+    <div padding>
+      <ion-segment [(ngModel)]="lab">
+        <ion-segment-button value="lab1">
+          Lab-01
+        </ion-segment-button>
+        <ion-segment-button value="lab2">
+          Lab-02
+        </ion-segment-button>
+        <ion-segment-button value="lab3">
+          Lab-03
+        </ion-segment-button>
+        <ion-segment-button value="lab4">
+          Lab-04
+        </ion-segment-button>
+        <ion-segment-button value="lab5">
+          Lab-05
+        </ion-segment-button>
+        <ion-segment-button value="lab6">
+          Lab-06
+        </ion-segment-button>
+        <ion-segment-button value="lab7">
+          Lab-07
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    
+    <div [ngSwitch]="lab">
+      <ion-list *ngSwitchCase="'lab1'">
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-12>Disponibilidad:</ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-2><ion-icon name="laptop"></ion-icon></ion-col>
+              <ion-col col-4 ion-button small>8:30 - 10:00</ion-col>
+              <ion-col col-1>:</ion-col>
+              <ion-col col-5 ion-button color="secondary" small>Disponible</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-2><ion-icon name="laptop"></ion-icon></ion-col>
+              <ion-col col-4 ion-button small>10:15 - 11:45</ion-col>
+              <ion-col col-1>:</ion-col>
+              <ion-col col-5 ion-button color="secondary" small>Disponible</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
+              <ion-col col-4 ion-button small>12:00 - 13:30</ion-col>
+              <ion-col col-1>:</ion-col>
+              <ion-col col-5 ion-button color="danger" small>No Disponible</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    
+      <ion-list *ngSwitchCase="'lab2'">
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-12>Disponibilidad:</ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
+              <ion-col col-4 ion-button small>8:30 - 10:00</ion-col>
+              <ion-col col-1>:</ion-col>
+              <ion-col col-5 ion-button color="danger" small>No Disponible</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
+              <ion-col col-4 ion-button small>10:15 - 11:45</ion-col>
+              <ion-col col-1>:</ion-col>
+              <ion-col col-5 ion-button color="danger" small>No Disponible</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
+              <ion-col col-4 ion-button small>12:00 - 13:30</ion-col>
+              <ion-col col-1>:</ion-col>
+              <ion-col col-5 ion-button color="danger" small>No Disponible</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </div>
 </ion-content>
