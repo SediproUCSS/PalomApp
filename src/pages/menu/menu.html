@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header >
 
   <ion-navbar color="PalomApp">
     <button ion-button menuToggle>
@@ -16,16 +16,15 @@
 </ion-header>
 
 
-<ion-content padding >
+<ion-content padding>
   <div class="plato">
     <img src="./assets/imgPlato/plato.jpg">
     <h1>MENU LUNES</h1>
   </div>
   <ion-list>
-
-    <ion-item *ngFor="let plato of list" >
+      <ion-item *ngFor="let plato of list" >
       <ion-thumbnail>
-      <img src="{{ plato.img_plato }}">
+      <!--<img src="{{ plato.img_plato }}">-->
       </ion-thumbnail>
       <h2>{{ plato.nom_plato }}</h2>
       <p>{{ plato.descripcion }}</p>
@@ -34,4 +33,20 @@
   </ion-list>
 </ion-content>
 
+<!--
+  JALANDO DATOS DEL ARCHIVO PLATO.JSON
 
+<script type="text/javascript">
+var misDatos = angular.module('datosApp',[]);
+misDatos.controller('controladorDatos', function($scope,$http){
+  $scope.importar=function(){
+    $http.get('../../assets/data/plato.js').success(function(datos){
+      $scope.plato =datos;
+    })
+  }
+  $scope.importar();
+  console.log(datos);
+});
+</script>
+
+-->
