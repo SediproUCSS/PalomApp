@@ -104,5 +104,26 @@
           </ion-grid>
         </ion-item>
       </ion-list>
+
+      <ion-list *ngSwitchCase="'lab3'">
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-12>Disponibilidad:</ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-grid>
+            <ion-item *ngFor="let Disponibilidad of list" >
+            <ion-row>   
+              <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
+              <ion-col col-4 ion-button small>{{ Disponibilidad.hor_ini }} - {{ Disponibilidad.hor_fin }}</ion-col>
+              <ion-col col-1>:</ion-col>
+              <ion-col col-5 ion-button color="danger" small>{{ Disponibilidad.estado }}</ion-col>
+            </ion-row>
+          </ion-item>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
     </div>
 </ion-content>
+
