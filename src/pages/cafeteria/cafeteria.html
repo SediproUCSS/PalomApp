@@ -22,7 +22,10 @@
         <ion-avatar item-left>
             <img src="./assets/imgPlato/plato.jpg">
           </ion-avatar>
-          <h2>LUNES</h2>
+          <h2>LUNES
+              {{'2018-01-02' | date:'dd/MM/yy'}}
+              <span>{{'2018-01-02' | date: 'fullDate' | uppercase}}</span>
+          </h2>
           <p>Desccripcion 1</p>
     </ion-item>
 
@@ -67,3 +70,6 @@
     </ion-item>
   </ion-list>
 </ion-content>
+<script>
+  var fechas=angular.module('fechas', []);
+</script>

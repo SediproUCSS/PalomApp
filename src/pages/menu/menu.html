@@ -14,8 +14,25 @@
   </ion-navbar>
 
 </ion-header>
+<ion-content>
+<ion-card *ngFor="let plato of list" >
+    <img src="{{ plato.img_plato }}"/>
+    <ion-card-content  >
+        <ion-card-title>
+          {{ plato.nom_plato }}
+        </ion-card-title>
+      <p>{{'2018-01-02' | date: 'fullDate' | uppercase}}</p>
+      <p>{{ plato.descripcion }}</p>
+      <p>{{plato.id_local }}</p>
+      
+    </ion-card-content>
+  </ion-card>
 
-
+  <script>
+      var fechas=angular.module('fechas', []);
+    </script>
+ </ion-content> 
+  <!--
 <ion-content padding>
   <div class="plato">
     <img src="./assets/imgPlato/plato.jpg">
@@ -24,7 +41,7 @@
   <ion-list>
       <ion-item *ngFor="let plato of list" >
       <ion-thumbnail>
-      <!--<img src="{{ plato.img_plato }}">-->
+      <img src="{{ plato.img_plato }}">
       </ion-thumbnail>
       <h2>{{ plato.nom_plato }}</h2>
       <p>{{ plato.descripcion }}</p>
@@ -32,8 +49,10 @@
 
   </ion-list>
 </ion-content>
+<script>
+    var fechas=angular.module('fechas', []);
+  </script>
 
-<!--
   JALANDO DATOS DEL ARCHIVO PLATO.JSON
 
 <script type="text/javascript">

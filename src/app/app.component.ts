@@ -8,8 +8,8 @@ import { InicioPage} from '../pages/inicio/inicio';
 import { MapaPage} from '../pages/mapa/mapa';
 import { CafeteriaPage} from '../pages/cafeteria/cafeteria';
 import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
-import { LocalPage} from '../pages/local/local';
 import { LocallabPage} from '../pages/locallab/locallab';
+import { MenuPage } from '../pages/menu/menu';
 @Component({
   templateUrl: 'app.html'
 })
@@ -23,7 +23,7 @@ export class MyApp {
     this.pages= [
       {titulo:'Inicio',component:InicioPage,icon:'home'},
       {titulo:'Mapa',component:MapaPage,icon:'map'},
-      {titulo:'Cafeteria',component:LocalPage,icon:'cafe'},
+      {titulo:'Cafeteria',component:MenuPage,icon:'cafe'},
       {titulo:'Laboratorio',component:LocallabPage,icon:'desktop'}
     ];
     platform.ready().then(() => {

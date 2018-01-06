@@ -24,7 +24,7 @@ export class Platos {
       });
     })
   }
-*/
+
   public getListPlato(){
     return new Promise((resolve, reject)=>{
       this.http.get('../../assets/data/plato.json').map(res => res.json())
@@ -42,5 +42,5 @@ export class Platos {
     );
     })
   }
-
+*/
 }

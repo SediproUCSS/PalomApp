@@ -1,0 +1,10 @@
+[
+    {"id_plato":"PLT001",
+     "id_local":"LOC001",
+     "fecha":"2018-01-10",
+     "precio":"4"},
+    {"id_plato":"PLT002",
+        "id_local":"LOC002",
+        "fecha":"2018-01-02",
+        "precio":"8"}
+]

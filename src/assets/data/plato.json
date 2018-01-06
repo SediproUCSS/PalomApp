@@ -1,1 +1,30 @@
-[{"id_plato":"PLT001","descripcion":"Ees un ceviche","nom_plato":"CEVICHE","img_plato":"dassssssss"},{"id_plato":"PLT002","descripcion":"Ees un CUY","nom_plato":"CUY","img_plato":"saaaaaaaaaaa"}]
+[{"id_plato":"PLT001",
+    "descripcion":"Consiste en marinar la carne del pescado en un recipiente con mucho limón, ají, cebolla morada, culantro, sal y pimienta, hasta que esté lista para el consumo (unos 20 minutos).",
+    "nom_plato":"CEVICHE",
+    "img_plato":"https://cdn.viajala.com/img/blog/5-platos-tipicos-peru/ceviche-peruano.jpg",
+    "local":[
+                {"id_local":"LOC001",
+                 "nom_local":"LOCAL CENTRAL"
+                }
+            ]
+    },
+ {"id_plato":"PLT002",
+    "descripcion":"Además de tener un sabor suave y, para muchos, exquisito, la carne del cuy es rica en proteínas, hierro y baja en grasa, así que es una muy buena opción para los carnívoros que buscan una alimentación saludable.",
+    "nom_plato":"CUY",
+    "img_plato":"https://cdn.viajala.com/img/blog/5-platos-tipicos-peru/cuy-peru.jpg",
+    "local":[
+        {"id_local":"LOC002",
+         "nom_local":"GONZALES PRADA"
+        }
+    ]
+},
+ {"id_plato":"PLT003",
+    "descripcion":"Se prepara con ají amarillo y, lo que diferencia al ají de gallina de cualquier otro guiso, es que se utilizan algunos ingredientes no tan comunes en este tipo de preparaciones, como pan de molde o galletas de soda, leche y pecanas, un tipo de nueces originarias de América del Norte.",
+    "nom_plato":"AJÍ DE GALLINA",
+    "img_plato":"https://cdn.viajala.com/img/blog/5-platos-tipicos-peru/aji-de-gallina.jpg",
+    "local":[
+        {"id_local":"LOC001",
+         "nom_local":"LOCAL CENTRAL"
+        }
+    ]
+    }]
