@@ -16,15 +16,35 @@
 </ion-header>
  
 <ion-content padding>
+  <!--div onclick="window.open('www.google.com', '_self',); return false;">
+    <ion-icon ios="logo-youtube" md="logo-youtube" style="color: red;"></ion-icon>
+  </div>
   <h1>Bienvenido Papu ! </h1>
   <p>Este es una aplicacion llamada PalomApp</p>   
   <div class="list">
-      <a class="item" href="#" onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_self',); return false;">
-        Abrir Noticias en la misma aplicacion
+      <a class="item" onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_self',); return false;">
+        
+        <ion-icon ios="logo-youtube" md="logo-youtube" style="color: red;"></ion-icon>
       </a>
     <br/>
       <a class="item" href="#" onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_system', 'location=yes'); return false;">
         Abrir Noticias en la pagina web
     </a>
-  </div>
+  </div-->
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="PalomApp">
+    <div>
+      <a onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_self',); return false;">
+        <ion-icon ios="ios-paper" md="md-paper" class="espacio-4" style="color: white;"></ion-icon>
+      </a>
+      <a onclick="window.open('https://www.facebook.com/UCSS.PE/', '_self',); return false;">
+        <ion-icon ios="logo-facebook" md="logo-facebook" class="espacio-4" style="color: white;"></ion-icon>
+      </a>
+      <a onclick="window.open('https://www.youtube.com/user/ucsslimanorte', '_self',); return false;">
+        <ion-icon ios="logo-youtube" md="logo-youtube" class="espacio-4" style="color: white;"></ion-icon>
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-footer>
