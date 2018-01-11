@@ -35,7 +35,7 @@ export class MenuPage {
       console.log(err);
     });
    */
-          this.http.get('../../assets/data/plato.json').map(res => res.json())
+          this.http.get('../../assets/data/vista_menu.json').map(res => res.json())
           .subscribe(data=>{
             this.list=data;
             console.log('Los datos son: ' ,data);

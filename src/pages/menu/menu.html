@@ -15,17 +15,16 @@
 
 </ion-header>
 <ion-content>
-<ion-card *ngFor="let plato of list" >
-    <img src="{{ plato.img_plato }}"/>
+<ion-card *ngFor="let vista_menu of list" >
+    <img src="{{ vista_menu.img_plato }}"/>
     <ion-card-content  >
         <ion-card-title>
-          {{ plato.nom_plato }}
+          {{ vista_menu.nom_plato }}
         </ion-card-title>
-      <p>{{'2018-01-02' | date: 'fullDate' | uppercase}}</p>
-      <p>{{ plato.descripcion }}</p>
-      <p>{{plato.id_local }}</p>
-      <p><b>Precio: S/. 8.00</b></p>
-      <button>LOCAL CENTRAL</button>
+      <p>{{vista_menu.fecha | date: 'fullDate' | uppercase}}</p>
+      <p>{{ vista_menu.descripcion }}</p>
+      <p><b>S/. {{vista_menu.precio}}</b></p>
+      <button>{{vista_menu.nom_local}}</button>
     </ion-card-content>
   </ion-card>
 
