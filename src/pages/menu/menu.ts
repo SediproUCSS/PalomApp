@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PlatoPage } from '../plato/plato';
+/**import { PlatoPage } from '../plato/plato';*/
 import { Platos } from '../../providers/platos/platos';
 /**importar estos datos obligatorio */
 import { Http } from '@angular/http';
@@ -27,14 +27,14 @@ export class MenuPage {
   constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Platos) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
-    /**MOSTRAR GET LIST DE PLATOS.TS 
+    /*MOSTRAR GET LIST DE PLATOS.TS */
     users.getListPlato().then(results=>{
-      console.log(results);
+      console.log('platos completados'+ results);
       this.list=results;
     }).catch(err=>{
-      console.log(err);
+      console.log(err);  
     });
-   */
+   /**
           this.http.get('../../assets/data/vista_menu.json').map(res => res.json())
           .subscribe(data=>{
             this.list=data;
@@ -48,15 +48,15 @@ export class MenuPage {
           }
 
         );
-  
+  */
     /*this.getdata();*/
     
   }
 
-  goToplato(menuID){
+  /*goToplato(menuID){
     this.navCtrl.push(PlatoPage, { menuID:menuID });
   }
-
+*/
   ionViewDidLoad() {
     
     console.log('ionViewDidLoad MenupruebaPage');

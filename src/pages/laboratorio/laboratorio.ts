@@ -31,7 +31,7 @@ export class LaboratorioPage {
       console.log(err);
     });
    */
-          this.http.get('../../assets/data/disponibilidad.json').map(res => res.json())
+          this.http.get('assets/data/disponibilidad.json').map(res => res.json())
           .subscribe(data=>{
             this.list=data;
             console.log('Los datos son: ' ,data);
