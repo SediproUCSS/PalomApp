@@ -1,2 +1,6 @@
-[{"id_laboratorio":"lab1lc","num_laboratorio":"Laboratorio 1 LC","capacidad":"30","local_id_local":"lc"},
-    {"id_laboratorio":"lab2lc","num_laboratorio":"Laboratorio 2 LC","capacidad":"30","local_id_local":"lc"}]
+[{"id_laboratorio":[{"hor_ini":"8:30","hor_fin":"10:00","estado":"0","fecha":"05/01/2018"},
+    {"hor_ini":"10:15","hor_fin":"11:45","estado":"1","fecha":"05/01/2018"},
+    {"hor_ini":"12:00","hor_fin":"13:00","estado":"1","fecha":"05/01/2018"}],
+    "num_laboratorio":"Laboratorio 1 LC","capacidad":"30","local_id_local":"lc"},
+    {"id_laboratorio":[{"hor_ini":"8:30","hor_fin":"10:00","estado":"0","fecha":"05/01/2018"}],
+    "num_laboratorio":"Laboratorio 2 LC","capacidad":"30","local_id_local":"lc"}]
