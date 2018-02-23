@@ -16,9 +16,11 @@ import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
 import { MenuPage } from '../pages/menu/menu';
 import { PlatoPage } from '../pages/plato/plato';
 import { LocalPage } from '../pages/local/local';
+import { ObjetoPage } from '../pages/objeto/objeto';
 import { LocallabPage } from '../pages/locallab/locallab';
 import { Users } from '../providers/users/users';
 import { Platos } from '../providers/platos/platos';
+import { ObjetoProvider } from '../providers/objeto/objeto';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { Platos } from '../providers/platos/platos';
     MenuPage,
     PlatoPage,
     LocalPage,
-    LocallabPage
+    LocallabPage,
+    ObjetoPage
 
   ],
   imports: [
@@ -48,7 +51,8 @@ import { Platos } from '../providers/platos/platos';
     MenuPage,
     PlatoPage,
     LocalPage,
-    LocallabPage
+    LocallabPage,
+    ObjetoPage
   ],
   providers: [
     StatusBar,
@@ -57,7 +61,8 @@ import { Platos } from '../providers/platos/platos';
     GeolocationService,
     GoogleMaps,
     Users,
-    Platos
+    Platos,
+    ObjetoProvider
   ]
 })
 export class AppModule {}

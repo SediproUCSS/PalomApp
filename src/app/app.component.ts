@@ -10,6 +10,7 @@ import { CafeteriaPage} from '../pages/cafeteria/cafeteria';
 import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
 import { LocallabPage} from '../pages/locallab/locallab';
 import { MenuPage } from '../pages/menu/menu';
+import { ObjetoPage } from '../pages/objeto/objeto';
 @Component({
   templateUrl: 'app.html'
 })
@@ -22,9 +23,10 @@ export class MyApp {
     this.rootPage = InicioPage;
     this.pages= [
       {titulo:'Inicio',component:InicioPage,icon:'home'},
-      {titulo:'Mapa',component:MapaPage,icon:'map'},
-      {titulo:'Cafeteria',component:MenuPage,icon:'cafe'},
-      {titulo:'Laboratorio',component:LocallabPage,icon:'desktop'}
+      {titulo:'Mapa',component:MapaPage,icon:'pin'},
+      {titulo:'Cafeteria',component:MenuPage,icon:'pizza'},
+      {titulo:'Laboratorio',component:LocallabPage,icon:'desktop'},
+      {titulo:'Objetos Perdidos',component:ObjetoPage,icon:'cube'}
     ];
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
