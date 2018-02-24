@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { GeolocationService } from '../services/geolocation.service';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Http, HttpModule } from '@angular/http';
-
+import { Deeplinks }from '@ionic-native/deeplinks';
 
 import { MyApp } from './app.component';
 import { InicioPage} from '../pages/inicio/inicio';
@@ -62,7 +62,8 @@ import { ObjetoProvider } from '../providers/objeto/objeto';
     GoogleMaps,
     Users,
     Platos,
-    ObjetoProvider
+    ObjetoProvider,
+    Deeplinks
   ]
 })
 export class AppModule {}
