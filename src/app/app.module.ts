@@ -7,6 +7,8 @@ import { GeolocationService } from '../services/geolocation.service';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Http, HttpModule } from '@angular/http';
 import { Deeplinks }from '@ionic-native/deeplinks';
+import { InAppBrowser }from '@ionic-native/in-app-browser';
+
 
 import { MyApp } from './app.component';
 import { InicioPage} from '../pages/inicio/inicio';
@@ -21,6 +23,7 @@ import { LocallabPage } from '../pages/locallab/locallab';
 import { Users } from '../providers/users/users';
 import { Platos } from '../providers/platos/platos';
 import { ObjetoProvider } from '../providers/objeto/objeto';
+import {HomePage} from '../pages/home/home';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { ObjetoProvider } from '../providers/objeto/objeto';
     PlatoPage,
     LocalPage,
     LocallabPage,
-    ObjetoPage
+    ObjetoPage,
+    HomePage
 
   ],
   imports: [
@@ -52,7 +56,8 @@ import { ObjetoProvider } from '../providers/objeto/objeto';
     PlatoPage,
     LocalPage,
     LocallabPage,
-    ObjetoPage
+    ObjetoPage,
+    HomePage
   ],
   providers: [
     StatusBar,
@@ -63,7 +68,9 @@ import { ObjetoProvider } from '../providers/objeto/objeto';
     Users,
     Platos,
     ObjetoProvider,
-    Deeplinks
+    Deeplinks,
+    InAppBrowser,
+    HomePage
   ]
 })
 export class AppModule {}

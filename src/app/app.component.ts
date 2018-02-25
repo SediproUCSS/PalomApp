@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav } from 'ionic-angular';
+import { Platform, Nav,ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Deeplinks }from '@ionic-native/deeplinks';
+import { Deeplinks } from '@ionic-native/deeplinks';
+import { timer } from 'rxjs/observable/timer';
 
 import { InicioPage} from '../pages/inicio/inicio';
 import { MapaPage} from '../pages/mapa/mapa';
@@ -11,6 +12,7 @@ import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
 import { LocallabPage} from '../pages/locallab/locallab';
 import { MenuPage } from '../pages/menu/menu';
 import { ObjetoPage } from '../pages/objeto/objeto';
+import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
@@ -18,8 +20,8 @@ export class MyApp {
   @ViewChild ('NAV') nav: Nav;
   public rootPage:any;
   public pages: Array<{titulo: string,component: any, icon: string}>;
-
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private deeplinks: Deeplinks) {
+  showSplash=true;
+  constructor(platform: Platform,  statusBar: StatusBar, splashScreen: SplashScreen, private deeplinks: Deeplinks,modalCtrl: ModalController) {
     this.rootPage = InicioPage;
     this.pages= [
       {titulo:'Inicio',component:InicioPage,icon:'home'},
@@ -33,12 +35,18 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       
       statusBar.styleDefault();
-      splashScreen.hide();
+      //splashScreen.hide();
+      //timer(3000).subscribe(()=>this.showSplash=false)
+      let splash = modalCtrl.create(HomePage);
+      splash.present();
     });
+      
   }
+  
   goToPage(page){
     this.nav.setRoot(page);
     console.log('pagina cargada');
   }
+      
 }
 

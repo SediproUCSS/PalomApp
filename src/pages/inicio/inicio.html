@@ -4,6 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
 <ion-header>
 
   <ion-navbar color="PalomApp">
@@ -30,19 +31,22 @@
       <a class="item" href="#" onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_system', 'location=yes'); return false;">
         Abrir Noticias en la pagina web
     </a>
-  </div-->
+  </div
+  <button ion-button (click)="openWithSystemBrowser('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html')">
+    <ion-icon name="logo-facebook"></ion-icon>
+  </button>-->
 </ion-content>
 
 <ion-footer>
   <ion-toolbar color="PalomApp">
     <div>
-      <a onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_self',); return false;">
+      <a (click)="openWithSystemBrowser('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html')">
         <ion-icon ios="ios-paper" md="md-paper" class="espacio-4" style="color: white;"></ion-icon>
       </a>
-      <a onclick="window.open('https://www.facebook.com/UCSS.PE/', '_self',); return false;">
+      <a (click)="openWithSystemBrowser('https://www.facebook.com/UCSS.PE/')">
         <ion-icon ios="logo-facebook" md="logo-facebook" class="espacio-4" style="color: white;"></ion-icon>
       </a>
-      <a onclick="window.open('https://www.youtube.com/user/ucsslimanorte', '_self',); return false;">
+      <a (click)="openWithSystemBrowser('https://www.youtube.com/user/ucsslimanorte')">
         <ion-icon ios="logo-youtube" md="logo-youtube" class="espacio-4" style="color: white;"></ion-icon>
       </a>
     </div>
