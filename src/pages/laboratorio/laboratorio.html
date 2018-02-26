@@ -83,24 +83,14 @@
                       </ion-row>
                     </ion-grid>
                     <ion-grid>
-                      <ion-row>
-                        <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
-                        <ion-col col-4 ion-button small>8:30 - 10:00</ion-col>
-                        <ion-col col-1>:</ion-col>
-                        <ion-col col-5 ion-button color="danger" small>No Disponible</ion-col>
-                      </ion-row>
-                      <ion-row>
-                        <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
-                        <ion-col col-4 ion-button small>10:15 - 11:45</ion-col>
-                        <ion-col col-1>:</ion-col>
-                        <ion-col col-5 ion-button color="danger" small>No Disponible</ion-col>
-                      </ion-row>
-                      <ion-row>
-                        <ion-col col-2><ion-icon name="lock"></ion-icon></ion-col>
-                        <ion-col col-4 ion-button small>12:00 - 13:30</ion-col>
-                        <ion-col col-1>:</ion-col>
-                        <ion-col col-5 ion-button color="danger" small>No Disponible</ion-col>
-                      </ion-row>
+                      <ion-item *ngFor="let disponibilidad of list" >
+                        <ion-row>   
+                          <ion-col col-2><ion-icon name="laptop"></ion-icon></ion-col>
+                          <ion-col col-4 ion-button small>{{ disponibilidad.hor_ini }} - {{ disponibilidad.hor_fin }}</ion-col>
+                          <ion-col col-1>:</ion-col>
+                          <ion-col col-5 ion-button [color]="myColor[0]" (click)="falta(0)" small>{{ disponibilidad.estado }}</ion-col>
+                        </ion-row>
+                      </ion-item>
                     </ion-grid>
                   </ion-item>
                 </ion-list>
@@ -277,5 +267,6 @@
             </ion-item>
       </ion-list>
     </div>
+  
 </ion-content>
 

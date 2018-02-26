@@ -52,4 +52,14 @@ export class LaboratorioPage {
     console.log('laboratorio cargado');
   }
 
+  public myColor = ['danger', 'primary'];
+  public colors = ['danger', 'primary'];
+  public cont = 0;
+
+ falta(laboratorio: number){
+   this.cont++;
+   this.cont=(this.cont%this.colors.length)
+   this.myColor[laboratorio] = this.colors[this.cont];
+  }
+
 }
