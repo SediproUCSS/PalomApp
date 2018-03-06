@@ -24,6 +24,7 @@ import { Users } from '../providers/users/users';
 import { Platos } from '../providers/platos/platos';
 import { ObjetoProvider } from '../providers/objeto/objeto';
 import {HomePage} from '../pages/home/home';
+import { CalculadoraPage } from '../pages/calculadora/calculadora';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {HomePage} from '../pages/home/home';
     LocalPage,
     LocallabPage,
     ObjetoPage,
-    HomePage
+    HomePage,
+    CalculadoraPage
 
   ],
   imports: [
@@ -57,7 +59,8 @@ import {HomePage} from '../pages/home/home';
     LocalPage,
     LocallabPage,
     ObjetoPage,
-    HomePage
+    HomePage,
+    CalculadoraPage
   ],
   providers: [
     StatusBar,
