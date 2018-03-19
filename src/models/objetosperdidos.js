@@ -2,8 +2,8 @@ const mysql = require('mysql');
 connection = mysql.createConnection({
 host: 'localhost',
 user: 'root',
-password:'',
-database: 'sedipro_palomapp'
+password:'123456',
+database: 'palomapp'
 });
 
 let objetosperdidosModel ={}
