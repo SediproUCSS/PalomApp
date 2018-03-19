@@ -2,14 +2,14 @@ const mysql = require('mysql');
 connection = mysql.createConnection({
 host: 'localhost',
 user: 'root',
-password:'123456',
-database: 'palomapp'
+password:'',
+database: 'sedipro_palomapp'
 });
 
 let objetosperdidosModel ={}
 objetosperdidosModel.getObjetosPerdidos=(callback)=>{
   if (connection) {
-    connection.query('select * from ....',
+    connection.query('select * from objetos_perdidos',
     (err,rows)=>{
       if (err) {
         throw err;

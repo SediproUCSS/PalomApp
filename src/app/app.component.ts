@@ -14,6 +14,7 @@ import { MenuPage } from '../pages/menu/menu';
 import { ObjetoPage } from '../pages/objeto/objeto';
 import { HomePage } from '../pages/home/home';
 import { CalculadoraPage } from '../pages/calculadora/calculadora';
+import{ LabPage } from '../pages/lab/lab';
 @Component({
   templateUrl: 'app.html'
 })
@@ -29,6 +30,7 @@ export class MyApp {
       {titulo:'Mapa',component:MapaPage,icon:'pin'},
       {titulo:'Cafeteria',component:MenuPage,icon:'pizza'},
       {titulo:'Laboratorio',component:LocallabPage,icon:'desktop'},
+      {titulo:'Lab',component:LabPage,icon:'desktop'},
       {titulo:'Objetos Perdidos',component:ObjetoPage,icon:'cube'},
       {titulo:'Calcula Promedio',component:CalculadoraPage,icon:'calculator'}
     ];
