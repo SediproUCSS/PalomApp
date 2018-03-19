@@ -3,7 +3,7 @@ connection = mysql.createConnection({
 host: 'localhost',
 user: 'root',
 password:'123456',
-database: 'palomapp'
+database: 'sedipro_palomapp'
 });
 
 let AdministradorModel ={}
