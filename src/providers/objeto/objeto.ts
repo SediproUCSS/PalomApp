@@ -16,7 +16,7 @@ export class ObjetoProvider {
   }
   public getListObjeto(){
     return new Promise((resolve, reject)=>{
-      this.http.get('http://127.0.0.1:3000/objetosperdidos').map(res => res.json())
+      this.http.get('assets/data/objeto.json').map(res => res.json())
       .subscribe((data:any = [])=>{
         console.log('Fetch data objetos: ', data.length);
   

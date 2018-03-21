@@ -27,7 +27,7 @@ export class Laboratorios {
 */
   public getListLaboratorio(){
     return new Promise((resolve, reject)=>{
-      this.http.get('data/laboratorio.json').map(res => res.json())
+      this.http.get('assets/data/laboratorio.json').map(res => res.json())
       .subscribe(data=>{
         this.list=data;
         console.log('Los datos son: ' ,data);
