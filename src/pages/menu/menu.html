@@ -16,7 +16,7 @@
 </ion-header>
 <ion-content>
 <ion-card *ngFor="let vista_menu of list" >
-    <img src="{{ vista_menu.img_plato }}"/>
+    <img src="./{{ vista_menu.img_plato }}"/>
     <ion-card-content  >
         <ion-card-title>
           {{ vista_menu.nom_plato }}

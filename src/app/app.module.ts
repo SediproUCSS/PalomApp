@@ -25,6 +25,7 @@ import { Platos } from '../providers/platos/platos';
 import { ObjetoProvider } from '../providers/objeto/objeto';
 import {HomePage} from '../pages/home/home';
 import { CalculadoraPage } from '../pages/calculadora/calculadora';
+import{ LabPage } from '../pages/lab/lab';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CalculadoraPage } from '../pages/calculadora/calculadora';
     LocallabPage,
     ObjetoPage,
     HomePage,
-    CalculadoraPage
+    CalculadoraPage,
+    LabPage
 
   ],
   imports: [
@@ -54,6 +56,7 @@ import { CalculadoraPage } from '../pages/calculadora/calculadora';
     MapaPage,
     CafeteriaPage,
     LaboratorioPage,
+    LabPage,
     MenuPage,
     PlatoPage,
     LocalPage,
