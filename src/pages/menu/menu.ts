@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 /**import { PlatoPage } from '../plato/plato';*/
 import { Platos } from '../../providers/platos/platos';
 /**importar estos datos obligatorio */
-import { Http } from '@angular/http';
+import { Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 /**
  * Generated class for the MenuPage page.

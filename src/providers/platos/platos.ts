@@ -14,7 +14,7 @@ export class Platos {
   constructor(public http: Http) {
     console.log('Hello PlatosProvider Provider');
   }
- /*public getListPlato(){
+ public getListPlato(){
     return new Promise((resolve, reject)=>{
       this.http.get('http://127.0.0.1:3000/v_menu').map(res => res.json())
       .subscribe((data:any = [])=>{
@@ -24,7 +24,7 @@ export class Platos {
       });
     })
   }
-
+/*
   public getListPlato(){
     return new Promise((resolve, reject)=>{
       this.http.get('../../assets/data/vista_menu.json').map(res => res.json())
@@ -42,7 +42,7 @@ export class Platos {
     );
     })
   }
-  */
+  
 
   public getListPlato(){
     return new Promise((resolve, reject)=>{
@@ -53,7 +53,7 @@ export class Platos {
         resolve(data);
       });
     })
-  }
+  }*/
 /*
   public getListPlato(){
     return new Promise((resolve, reject)=>{

@@ -8,6 +8,7 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 import { Http, HttpModule } from '@angular/http';
 import { Deeplinks }from '@ionic-native/deeplinks';
 import { InAppBrowser }from '@ionic-native/in-app-browser';
+import { Geolocation ,Geoposition } from '@ionic-native/geolocation';
 
 
 import { MyApp } from './app.component';
@@ -26,6 +27,8 @@ import { ObjetoProvider } from '../providers/objeto/objeto';
 import {HomePage} from '../pages/home/home';
 import { CalculadoraPage } from '../pages/calculadora/calculadora';
 import{ LabPage } from '../pages/lab/lab';
+import { LocalProvider } from '../providers/local/local';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +45,7 @@ import{ LabPage } from '../pages/lab/lab';
     HomePage,
     CalculadoraPage,
     LabPage
+    
 
   ],
   imports: [
@@ -70,13 +74,15 @@ import{ LabPage } from '../pages/lab/lab';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GeolocationService,
+    Geolocation,
     GoogleMaps,
     Users,
     Platos,
     ObjetoProvider,
     Deeplinks,
     InAppBrowser,
-    HomePage
+    HomePage,
+    LocalProvider
   ]
 })
 export class AppModule {}

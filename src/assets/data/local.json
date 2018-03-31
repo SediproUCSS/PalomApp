@@ -1,0 +1,14 @@
+[{"id_local":"1",
+    "nom_local":"Local Central",
+    "lat":"-12.0000527",
+    "lon":"-77.0638797",
+    "direccion":"Esquina Constelaciones y Sol de Oro S/N",
+    "sigla":"LC"
+    },
+ {"id_local":"2",
+    "nom_local":"Gonzales Prada",
+    "lat":"-11.99537937",
+    "lon":"-77.0674281",
+    "direccion":"Manuel Gonzales Prada 688",
+    "sigla":"GP"
+}]
