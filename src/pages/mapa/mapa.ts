@@ -105,8 +105,8 @@ loadMap() {
             lat: -12.0000527,
             lng: -77.0638797
           },
-          zoom: 9,
-          tilt: 30
+          zoom: 20,
+          tilt: 10
         }
       };
   
@@ -120,7 +120,7 @@ loadMap() {
           // Now you can use all methods safely.
           this.map.addMarker({
               title: 'LOCAL CENTRAL',
-              icon: 'PalomApp',
+              icon: 'assets/imgs/marc.png',
               animation: 'DROP',
               position: {
                 lat: -12.0000527,
@@ -129,11 +129,20 @@ loadMap() {
             }),
             this.map.addMarker({
               title: 'GONZALES PRADA',
-              icon: 'PalomApp',
+              icon: 'assets/imgs/marc.png',
               animation: 'DROP',
               position: {
                 lat: -11.99537937,
                 lng: -77.0674281
+              }
+            }),
+            this.map.addMarker({
+              title: 'GLOBO TERRÁQUEO',
+              icon: 'assets/imgs/marc.png',
+              animation: 'DROP',
+              position: {
+                lat: -11.99867550450735,
+                lng: -77.06386220292143
               }
             })
            /* .then(marker => {

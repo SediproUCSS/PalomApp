@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams,ModalController,AlertController } from 'ionic-angular';
+import * as moment from 'moment';
 /**
  * Generated class for the CalculadoraPage page.
  *
@@ -14,15 +14,51 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'calculadora.html',
 })
 export class CalculadoraPage {
+  eventSource=[];
+viewTitle:string;
+selectedDay=new Date();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    /*function add(p1:number,p2:number,p3:number,p4:number,c1:number,c2:number,c3:number,c4:number
-    ,c5:number,c6:number,c7:number,c8:number,c9:number,c10:number){
-      var promparcial=(p1/10)+((p2*2)/10)+((p3*2)/10)+((p4*3)/10);
-      var promcontinu=(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10)*2/10;
-      var result= promparcial+promcontinu;
-      alert(result);
-    }*/
+calendar={
+  mode:'month',
+  currentDate:this.selectedDay
+}
+  constructor(public navCtrl: NavController, public navParams: NavParams,private modalCtrl:ModalController,private alertCtrl:AlertController) {
+
+  }
+
+  addEvent(){
+   let modal= this.modalCtrl.create('EventModalPage',{selectedDay:this.selectedDay});
+   modal.present();
+   modal.onDidDismiss(data=>{
+     if(data){
+       let eventData=data;
+       eventData.startTime=new Date(data.startTime);
+       eventData.endTime=new Date(data.endTime);
+       let events=this.eventSource;
+       events.push(eventData);
+       this.eventSource=[];
+       setTimeout(()=>{
+         this.eventSource=events
+       });
+     }
+   })
+  }
+  onViewTitleChanged(title){
+this.viewTitle=title;
+  }
+  onTimeSelected(ev){
+this.selectedDay=ev.selectedTime;
+  }
+  onEventSelected(event){
+let start=moment(event.startTime).format('LLLL');
+let end=moment(event.endTime).format('LLLL');
+
+let alert=this.alertCtrl.create({
+  title:''+event.title,
+  subTitle:'From: '+ start +'<br>To: '+end,
+  buttons:['OK']
+});
+alert.present();
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalculadoraPage');

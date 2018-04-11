@@ -112,9 +112,11 @@
         <variable name="DEEPLINK_5_HOST" value=" " />
     </plugin>
     <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
-    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-googlemaps" spec="^2.0.11">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDoy1cwDi2NhkuBQcNaltnCjtsm-Wy-muk" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyDoy1cwDi2NhkuBQcNaltnCjtsm-Wy-muk" />
     </plugin>
+    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
+    <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.2" />
+    <plugin name="cordova-plugin-calendar" spec="^5.0.0" />
 </widget>

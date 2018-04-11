@@ -1,3 +1,4 @@
-[{"hor_ini":"8:30","hor_fin":"10:00","estado":"0","fecha":"05/01/2018","id_laboratorio":"lab1lc"},
-    {"hor_ini":"10:15","hor_fin":"11:45","estado":"1","fecha":"05/01/2018","id_laboratorio":"lab1lc"},
-    {"hor_ini":"12:00","hor_fin":"13:00","estado":"1","fecha":"05/01/2018","id_laboratorio":"lab1lc"}]
+{"items":
+    [{"hor_ini":"05:00","hor_fin":"10:00","estado":"OCUPADO","fecha":"Domingo","id_laboratorio":"3"},
+    {"hor_ini":"08:00","hor_fin":"09:00","estado":"OCUPADO","fecha":"Lunes","id_laboratorio":"2"}]
+}

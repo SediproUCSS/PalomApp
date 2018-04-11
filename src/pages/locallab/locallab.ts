@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LaboratorioPage } from '../laboratorio/laboratorio';
+import { LabPage } from '../lab/lab';
 
 /**
  * Generated class for the LocallabPage page.
@@ -23,7 +23,7 @@ export class LocallabPage {
   }
 
   goTolaboratorio(laboratorioID){
-    this.navCtrl.push(LaboratorioPage, { laboratorioID:laboratorioID });
+    this.navCtrl.push(LabPage, { laboratorioID:laboratorioID });
   }
 
 ionViewDidLoad() {

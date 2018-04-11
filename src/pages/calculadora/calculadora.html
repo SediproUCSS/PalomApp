@@ -10,129 +10,26 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Calculadora</ion-title>
+    <ion-title>{{ viewTitle }}</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="addEvent()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
+  <calendar [eventSource]="eventSource"
+  [calendarMode]="calendar.Mode"
+  [currentDate]="calendar.CurrentDate"
+  (onEventSelected)="onEventSelected($event)"
+  (onTitleChanged)="onViewTitleChanged($event)"
+  (onTimeSelected)="onTimeSelected($event)"
+  step="30"
+  class="calendar">
     
-      <ion-item>
-        <ion-label floating>Parcial 1</ion-label>
-        <ion-input type="text" id="p1"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label floating>Parcial 2</ion-label>
-        <ion-input type="text" id="p2"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label floating>Parcial 3</ion-label>
-        <ion-input type="text" id="p3"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label floating>Examen Final</ion-label>
-        <ion-input type="text" id="p4"></ion-input>
-      </ion-item>
-    
-      <ion-row>
-          <ion-col col-12>
-                <ion-item>       
-                    <ion-label floating>Continua 1</ion-label>
-                    <ion-input type="text" id="c1"></ion-input>    
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 2</ion-label>
-                    <ion-input type="text" id="c2"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 3</ion-label>
-                    <ion-input type="text" id="c3"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 4</ion-label>
-                    <ion-input type="text" id="c4"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 5</ion-label>
-                    <ion-input type="text" id="c5"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 6</ion-label>
-                    <ion-input type="text" id="c6"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 7</ion-label>
-                    <ion-input type="text" id="c7"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 8</ion-label>
-                    <ion-input type="text" id="c8"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 9</ion-label>
-                    <ion-input type="text" id="c9"></ion-input> 
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Continua 10</ion-label>
-                    <ion-input type="text" id="c10"></ion-input> 
-                </ion-item>
-                
-          </ion-col>
-      </ion-row>
-
-    </ion-list>  
-
-<div>
-<button ion-button color="PalomApp" id="resultado">
-MOSTRAR PROMEDIO
-</button>
-</div>
-<ion-item>
-    <ion-label floating id="res"></ion-label>
-</ion-item>
+  </calendar>
 </ion-content>
-<script>
-  
-
-(function (){
-  document.getElementById('resultado').addEventListener('click', add, true);
-  function add(){
-    var p1= document.getElementById('p1').value;
-    var p2= document.getElementById('p2').value;
-    var p3= document.getElementById('p3').value;
-    var p4= document.getElementById('p4').value;
-
-    var c1= document.getElementById('c1').value;
-    var c2= document.getElementById('c2').value;
-    var c3= document.getElementById('c3').value;
-    var c4= document.getElementById('c4').value;
-    var c5= document.getElementById('c5').value;
-    var c6= document.getElementById('c6').value;
-    var c7= document.getElementById('c7').value;
-    var c8= document.getElementById('c8').value;
-    var c9= document.getElementById('c9').value;
-    var c10= document.getElementById('c10').value;
-
-    var prom= (parseFloat(p1)/10)+(parseFloat(p1)*2/10)+(parseFloat(p1)*2/10)+(parseFloat(p1)*3/10);
-    var promcont=(parseFloat(c1)+parseFloat(c2)+parseFloat(c3)+parseFloat(c4)+parseFloat(c5)
-    +parseFloat(c6)+parseFloat(c7)+parseFloat(c8)+parseFloat(c9)+parseFloat(c10))*2/10;
-    var result=(parseFloat(prom)+parseFloat(promcont));
-    console.log(result);
-    
-}
-})();
-</script>

@@ -5,10 +5,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GeolocationService } from '../services/geolocation.service';
 import { GoogleMaps } from '@ionic-native/google-maps';
-import { Http, HttpModule } from '@angular/http';
+import { Http, HttpModule,} from '@angular/http';
 import { Deeplinks }from '@ionic-native/deeplinks';
 import { InAppBrowser }from '@ionic-native/in-app-browser';
 import { Geolocation ,Geoposition } from '@ionic-native/geolocation';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { MyApp } from './app.component';
@@ -28,8 +29,20 @@ import {HomePage} from '../pages/home/home';
 import { CalculadoraPage } from '../pages/calculadora/calculadora';
 import{ LabPage } from '../pages/lab/lab';
 import { LocalProvider } from '../providers/local/local';
+import { Laboratorios } from '../providers/laboratorios/laboratorios';
+import {EventModalPage} from '../pages/event-modal/event-modal';
+import{ NosotrosPage } from '../pages/nosotros/nosotros';
+import{ ProyectosPage } from '../pages/proyectos/proyectos';
+/*import { CustomEventTitleFormatterProvider } from '../providers/custom-event-title-formatter/custom-event-title-formatter';
+import { CustomDateFormatterProvider } from '../providers/custom-date-formatter/custom-date-formatter';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CalendarModule,CalendarDateFormatter,CalendarEventTitleFormatter} from 'angular-calendar';
+import {CalendarWeekHoursViewModule} from 'angular-calendar-week-hours-view';
 
+*/
+import {NgCalendarModule} from 'ionic2-calendar';
+//import {CalendarModule} from 'angular-calendar';
 @NgModule({
   declarations: [
     MyApp,
@@ -44,14 +57,21 @@ import { LocalProvider } from '../providers/local/local';
     ObjetoPage,
     HomePage,
     CalculadoraPage,
-    LabPage
+    LabPage,
+    EventModalPage,
+    NosotrosPage,
+    ProyectosPage
     
 
   ],
-  imports: [
+  imports: [NgCalendarModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    HttpClientModule
+    /*BrowserAnimationsModule,
+    CalendarModule.forRoot(),
+    CalendarWeekHoursViewModule*/
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -67,7 +87,9 @@ import { LocalProvider } from '../providers/local/local';
     LocallabPage,
     ObjetoPage,
     HomePage,
-    CalculadoraPage
+    CalculadoraPage,
+    NosotrosPage,
+    ProyectosPage
   ],
   providers: [
     StatusBar,
@@ -82,7 +104,9 @@ import { LocalProvider } from '../providers/local/local';
     Deeplinks,
     InAppBrowser,
     HomePage,
-    LocalProvider
+    LocalProvider,Laboratorios
+   /* CustomEventTitleFormatterProvider,
+    CustomDateFormatterProvider*/
   ]
 })
 export class AppModule {}

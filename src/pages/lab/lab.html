@@ -28,95 +28,161 @@
             </ion-list>
 </ion-content>
 -->
-<ion-content padding>
+<!-- 
+<ion-content padding >
 <div padding>
-    <ion-segment [(ngModel)]="pet">
 
-      <ion-segment-button value="Lu">
-        Lu
+    <ion-segment *ngFor="let laboratorio of list" [(ngModel)]="pet" >
+
+      <ion-segment-button *ngIf="Lunes" value="{{laboratorio.fecha}}" >
+        {{laboratorio.fecha}}
       </ion-segment-button>
 
-      <ion-segment-button value="Ma">
-        Ma
-      </ion-segment-button>
 
-      <ion-segment-button value="Mi">
-        Mi
-      </ion-segment-button>
+    <ion-segment [(ngModel)]="pet" >
 
-      <ion-segment-button value="Ju">
-        Ju
-      </ion-segment-button>
+              <ion-segment-button value="Lu">
+                Lu
+              </ion-segment-button>
 
-      <ion-segment-button value="Vi">
-          Vi
-      </ion-segment-button>
+              <ion-segment-button value="Ma">
+                Ma
+              </ion-segment-button>
 
-      <ion-segment-button value="Sa">
-         Sa
-        </ion-segment-button>
+              <ion-segment-button value="Mi">
+                Mi
+              </ion-segment-button>
+
+              <ion-segment-button value="Ju">
+                Ju
+              </ion-segment-button>
+
+              <ion-segment-button value="Vi">
+                  Vi
+              </ion-segment-button>
+
+              <ion-segment-button value="Sa">
+                Sa 
+                </ion-segment-button>
     </ion-segment>
   </div>
-  <div [ngSwitch]="pet">
+
+ <div *ngFor="let laboratorio of list" [ngSwitch]="pet" >
+
+ <div [ngSwitch]="pet" >
+
+
+      <ion-list  *ngSwitchCase="'Lunes'" >
+          <ion-item >LAB0{{laboratorio.id_laboratorio}}
+              <button ion-button color="secondary"  full>{{ laboratorio.estado }} {{laboratorio.hor_ini}}  {{laboratorio.hor_fin}}</button>
+          </ion-item>
+      </ion-list>
+
 
       <ion-list *ngSwitchCase="'Sa'">
           <ion-item>LAB 01
-              <button ion-button color="secondary"  full>LIBRE 8:00 - 10:00</button>
-              <button ion-button color="secondary"  full>LIBRE 14:00 - 16:00</button>
+              <button ion-button color="PalomApp"  full> LIBRE 14:00 - 15:45 </button>
+              <button ion-button color="PalomApp"  full> LIBRE 17:00 - 19:00 </button>
           </ion-item>
-          <ion-item>LAB 04
-              <button ion-button color="secondary"  full>LIBRE 10:00 - 11:00</button>
-              <button ion-button color="secondary"  full>LIBRE 16:00 - 18:00</button>
-          </ion-item>
-      </ion-list>
+
+        </ion-list>
+
       <ion-list *ngSwitchCase="'Vi'">
-          <ion-item>
-            <ion-thumbnail >
-              <img src="img/thumbnail-puppy-1.jpg">
-            </ion-thumbnail>
-            <h2>LIBRE</h2>
+          <ion-item>LAB 04
+              <button ion-button color="PalomApp"  full> LIBRE 14:00 - 15:45 </button>
           </ion-item>
-          ...
+          <ion-item>LAB 06
+              <button ion-button color="PalomApp"  full> LIBRE 17:00 - 19:00 </button>
+          </ion-item>
+
         </ion-list>
 
       <ion-list *ngSwitchCase="'Ju'">
-          <ion-item>
-            <ion-thumbnail >
-              <img src="img/thumbnail-puppy-1.jpg">
-            </ion-thumbnail>
-            <h2>LIBRE</h2>
+          <ion-item>LAB 07
+              <button ion-button color="PalomApp"  full> LIBRE 13:00 - 14:00 </button>
           </ion-item>
-          ...
+
         </ion-list>
 
       <ion-list *ngSwitchCase="'Mi'">
-          <ion-item>
-            <ion-thumbnail >
-              <img src="img/thumbnail-puppy-1.jpg">
-            </ion-thumbnail>
-            <h2>LIBRE</h2>
+          <ion-item>LAB 01
+              <button ion-button color="PalomApp"  full> LIBRE 14:00 - 15:45 </button>
+              <button ion-button color="PalomApp"  full> LIBRE 17:00 - 19:00 </button>
           </ion-item>
-          ...
+
         </ion-list>
 
       <ion-list *ngSwitchCase="'Ma'">
-        <ion-item>
-          <ion-thumbnail>
-            <img src="img/thumbnail-puppy-1.jpg">
-          </ion-thumbnail>
-          <h2>LIBRE</h2>
+        <ion-item>LAB 05
+            <button ion-button color="PalomApp"  full> LIBRE 14:00 - 15:45 </button>
         </ion-item>
-        ...
+        <ion-item>LAB 06
+            <button ion-button color="PalomApp"  full> LIBRE 17:00 - 19:00 </button>
+        </ion-item>
+
       </ion-list>
     
       <ion-list *ngSwitchCase="'Lu'">
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="img/thumbnail-kitten-1.jpg">
-          </ion-thumbnail>
-          <h2>LIBRE</h2>
+        <ion-item>LAB 03
+            <button ion-button color="PalomApp"  full> LIBRE 14:00 - 15:45 </button>
+            <button ion-button color="PalomApp"  full> LIBRE 08:00 - 10:00 </button>
+            <button ion-button color="PalomApp"  full> LIBRE 11:00 - 12:00 </button>
         </ion-item>
-        ...
+
       </ion-list>
     </div>
   </ion-content>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('datCtrl', function($scope) {
+        $scope.today = new Date();
+    });
+    </script>
+-->
+
+
+<ion-content>
+  <ion-list class="accordion-list">
+<!--PRIMER NIVEL-->
+    <ion-list-header *ngFor="let item of information; let i=index" no-lines no-padding>
+        <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+            <ion-icon item-left name="arrow-forward" *ngIf="!item.open"></ion-icon>
+            <ion-icon item-left name="arrow-down" *ngIf="item.open"></ion-icon>
+              {{ item.name }}
+          </button>
+          <ion-list *ngIf="item.children && item.open" no-lines>
+            <!--SEGUNDO NIVEL-->
+                  <ion-list-header *ngFor="let child of item.children; let j = index" no-padding>
+                      <!-- Toggle Button -->
+                          <button ion-item (click)="toggleItem(i, j)" *ngIf="child.children" class="child" detail-none>
+                            <ion-icon item-left name="add" *ngIf="!child.open"></ion-icon>
+                            <ion-icon item-left name="close" *ngIf="child.open"></ion-icon>
+                            {{ child.name }}
+                          </button>
+                  <!-- Direct Add Button as Fallback -->
+                          <ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
+                              <h2>{{ child.name }}</h2>
+                              <p text-lowercase>{{ child.information }}</p>
+                              <button ion-button outline item-end (click)="buyItem(child)">{{ child.price }}</button>
+                          </ion-item>
+
+                          <ion-list *ngIf="child.children && child.open">
+                              <!-- Third Level -->
+                              <ion-item *ngFor="let item of child.children; let k = index" detail-none class="child-item" text-wrap>
+                                <h2>{{ item.name }}</h2>
+                                <h2>{{ item.information }}</h2>
+                                <!-- Direct Add Button -->
+                                <button ion-button outline item-end (click)="buyItem(item)">{{ item.price }}</button>
+                              </ion-item>
+                            </ion-list>
+
+                  </ion-list-header>
+          </ion-list>
+    </ion-list-header>
+  </ion-list>
+</ion-content>
+
+
+

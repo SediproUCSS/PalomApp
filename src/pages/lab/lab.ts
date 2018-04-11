@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Laboratorios } from '../../providers/laboratorios/laboratorios';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 /**
@@ -20,18 +21,26 @@ export class LabPage {
   newsData:any;
   loading:any;
   posts = [];
-  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams) {
+  information:any[];
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Laboratorios) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
-    /**MOSTRAR GET LIST DE PLATOS.TS 
-    users.getListPlato().then(results=>{
-      console.log(results);
+    //MOSTRAR GET LIST DE laborarotios.ts 
+   /* users.getListLaboratorio().then(results=>{
+      console.log('labs completados'+results);
       this.list=results;
+      
     }).catch(err=>{
       console.log(err);
     });
-   */
-          this.http.get('assets/data/disponibilidad.json').map(res => res.json())
+*/
+
+    let localData=this.http.get('assets/data/information.json').map(res=>res.json().items);
+    localData.subscribe(data=>{
+      this.information=data;
+    })
+   
+       /*   this.http.get('http://127.0.0.1:3000/laboratorio').map(res => res.json())
           .subscribe(data=>{
             this.list=data;
             console.log('Los datos son: ' ,data);
@@ -46,12 +55,24 @@ export class LabPage {
         );
   
     /*this.getdata();*/
+    
+    
   }
 
+  toggleSection(i){
+    this.information[i].open=!this.information[i].open;
+  }
+  
+  toggleItem(i,j){
+    this.information[i].children[j].open=!this.information[i].children[j].open;
+  }
+
+
+  
   ionViewDidLoad() {
     console.log('laboratorio cargado');
   }
-
+/*
   public myColor = ['danger', 'primary'];
   public colors = ['danger', 'primary'];
   public cont = 0;
@@ -61,5 +82,5 @@ export class LabPage {
    this.cont=(this.cont%this.colors.length)
    this.myColor[lab] = this.colors[this.cont];
   }
-
+*/
 }

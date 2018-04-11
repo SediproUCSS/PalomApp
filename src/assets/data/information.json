@@ -1,0 +1,164 @@
+{
+    "items": [
+        {
+            "name": "LUNES",
+            "children": [
+                {
+                    "name": "LAB O1",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "06:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MARTES",
+            "children": [
+                {
+                    "name": "LAB O1",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "06:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB 02",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB 03",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MIERCOLES",
+            "children": [
+                {
+                    "name": "LAB O1",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "06:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "JUEVES",
+            "children": [
+                {
+                    "name": "LAB O1",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "06:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "VIERNES",
+            "children": [
+                {
+                    "name": "LAB O1",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "06:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SABADO",
+            "children": [
+                {
+                    "name": "LAB O1",
+                    "children": [
+                        {
+                            "name": "05:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "06:00",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

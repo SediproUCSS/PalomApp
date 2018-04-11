@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 /**import { PlatoPage } from '../plato/plato';*/
 import { Platos } from '../../providers/platos/platos';
 /**importar estos datos obligatorio */
-import { Http} from '@angular/http';
+import { Http,Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 /**
  * Generated class for the MenuPage page.
@@ -23,19 +23,23 @@ export class MenuPage {
   newsData:any;
   loading:any;
   posts = [];
+  url:string;
+  data:string;
+  platosusers: any[] = [];
  /* list = [];*/
-  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Platos) {
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
     /*MOSTRAR GET LIST DE PLATOS.TS */
-    users.getListPlato().then(results=>{
+  /*  users.getListPlato().then(results=>{
       console.log('platos completados'+ results);
       this.list=results;
     }).catch(err=>{
       console.log(err);  
     });
-   /**
-          this.http.get('../../assets/data/vista_menu.json').map(res => res.json())
+    */
+  
+          this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
           .subscribe(data=>{
             this.list=data;
             console.log('Los datos son: ' ,data);
@@ -48,7 +52,7 @@ export class MenuPage {
           }
 
         );
-  */
+  
     /*this.getdata();*/
     
   }
@@ -59,7 +63,22 @@ export class MenuPage {
 */
   ionViewDidLoad() {
     
-    console.log('ionViewDidLoad MenupruebaPage');
+  /*    this.users.getListPlato()
+      .subscribe(
+        (data) => { // Success
+          this.list = data['results'];
+        },
+        (error) =>{
+          console.error(error);
+        }
+      )
+    
+    console.log(this.platosusers);*/
+    this.loadPlatos();
+  }
+
+  loadPlatos(){
+    
   }
  /* getdata(){
     this.CardsService.getJsonData().subscribe(
