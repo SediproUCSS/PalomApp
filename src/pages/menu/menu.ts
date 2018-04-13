@@ -31,14 +31,14 @@ export class MenuPage {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
     /*MOSTRAR GET LIST DE PLATOS.TS */
-  /*  users.getListPlato().then(results=>{
+    users.getListPlato().then(results=>{
       console.log('platos completados'+ results);
       this.list=results;
     }).catch(err=>{
       console.log(err);  
     });
-    */
-  
+    
+  /*
           this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
           .subscribe(data=>{
             this.list=data;
@@ -52,7 +52,7 @@ export class MenuPage {
           }
 
         );
-  
+  /*
     /*this.getdata();*/
     
   }

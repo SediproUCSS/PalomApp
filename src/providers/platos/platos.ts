@@ -35,7 +35,7 @@ export class Platos {
     });
   })
 }*/
-/*
+
 public getListPlato(){
   return new Promise((resolve, reject)=>{
     this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
@@ -45,7 +45,7 @@ public getListPlato(){
       resolve(data);
     });
   })
-}*/
+}
 
 
 

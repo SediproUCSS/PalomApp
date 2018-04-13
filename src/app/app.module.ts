@@ -15,10 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { InicioPage} from '../pages/inicio/inicio';
 import { MapaPage} from '../pages/mapa/mapa';
-import { CafeteriaPage} from '../pages/cafeteria/cafeteria';
 import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
 import { MenuPage } from '../pages/menu/menu';
-import { PlatoPage } from '../pages/plato/plato';
 import { LocalPage } from '../pages/local/local';
 import { ObjetoPage } from '../pages/objeto/objeto';
 import { LocallabPage } from '../pages/locallab/locallab';
@@ -48,10 +46,8 @@ import {NgCalendarModule} from 'ionic2-calendar';
     MyApp,
     InicioPage,
     MapaPage,
-    CafeteriaPage,
     LaboratorioPage,
     MenuPage,
-    PlatoPage,
     LocalPage,
     LocallabPage,
     ObjetoPage,
@@ -78,11 +74,9 @@ import {NgCalendarModule} from 'ionic2-calendar';
     MyApp,
     InicioPage,
     MapaPage,
-    CafeteriaPage,
     LaboratorioPage,
     LabPage,
     MenuPage,
-    PlatoPage,
     LocalPage,
     LocallabPage,
     ObjetoPage,

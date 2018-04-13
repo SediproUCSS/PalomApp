@@ -7,7 +7,6 @@ import { timer } from 'rxjs/observable/timer';
 
 import { InicioPage} from '../pages/inicio/inicio';
 import { MapaPage} from '../pages/mapa/mapa';
-import { CafeteriaPage} from '../pages/cafeteria/cafeteria';
 import { LaboratorioPage} from '../pages/laboratorio/laboratorio';
 import { LocallabPage} from '../pages/locallab/locallab';
 import { MenuPage } from '../pages/menu/menu';
