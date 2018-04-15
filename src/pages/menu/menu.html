@@ -18,13 +18,13 @@
 
     <ion-card *ngFor="let v_menu of list" >
 
-        <!--<img src="{{ v_menu.img_plato }}"/>-->
+        <img src="{{ v_menu.img_plato }}"/>
         <!--<img src="./assets/imagenPlatos/{{v_menu.img_plato }}"/>-->
 
             <ion-card-content  >
-              
+
                   <ion-card-title>{{ v_menu.nom_plato }}</ion-card-title>
-                  
+
                   <p>{{v_menu.fecha | date: 'fullDate' | uppercase}}</p>
 
                   <p>{{ v_menu.descripcion }}</p>
@@ -43,7 +43,7 @@
 
       </script>
 -->
-</ion-content> 
+</ion-content>
 
 <!--
 // ************************************************************************************

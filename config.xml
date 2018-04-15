@@ -7,6 +7,8 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="https://*www.facebook.com/SediproUCSS/*" />
+    <allow-navigation href="https://whispering-coast-35310.herokuapp.com/*" />
+    <access origin="*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
@@ -120,6 +122,6 @@
     <plugin name="cordova-android-play-services-gradle-release" spec="^1.3.0">
         <variable name="PLAY_SERVICES_VERSION" value="12.+" />
     </plugin>
-    <engine name="android" spec="6.3.0" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <engine name="android" spec="6.3.0" />
 </widget>
