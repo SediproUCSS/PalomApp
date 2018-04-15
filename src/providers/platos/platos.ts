@@ -7,9 +7,18 @@ import { Platform } from 'ionic-angular'
 export class Platos {
   //list = [];
   //public list: any;
-  basepath="/herokuapi"
-  constructor(private http: Http,private _platform:Platform) {
-
+  constructor(public http: Http) {
+  }
+    public getListPlato(){
+  return new Promise((resolve, reject)=>{
+    this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
+    .subscribe((data:any = [])=>{
+      console.log('Fetch data contactos: ', data.length);
+      console.log('capturando la DATA: ', data);
+      resolve(data);
+    });
+  })
+}
  /*   if(this._platform.is("cordova")){
       this.basepath="https://whispering-coast-35310.herokuapp.com";
     }
@@ -42,17 +51,8 @@ export class Platos {
     });
   })
 }*/
-/*
-public getListPlato(){
-  return new Promise((resolve, reject)=>{
-    this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
-    .subscribe((data:any = [])=>{
-      console.log('Fetch data contactos: ', data.length);
-      console.log('capturando la DATA: ', data);
-      resolve(data);
-    });
-  })
-}*/
+
+
 
 
 
@@ -115,5 +115,4 @@ getListPlato() {
   return this.http.get(`${this.basepath}/v_menu`);
 }*/
 //*************************************************************** */
-}
 }

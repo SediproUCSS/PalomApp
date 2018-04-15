@@ -30,22 +30,21 @@ export class MenuPage {
   url:string;
   platosusers: any[] = [];
  /* list = [];*/
-  //constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos) {
-  constructor(public navCtrl: NavController, public navParams: NavParams,private menu:Platos,private http:Http
-  ,public alertCtrl: AlertController) {
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos) {
+
     
   //  this.userID=this.navParams.get('userID');
    // console.log(this.userID);
     /*MOSTRAR GET LIST DE PLATOS.TS */
-  /*  users.getListPlato().then(results=>{
+    users.getListPlato().then(results=>{
       console.log('platos completados'+ results);
       this.list=results;
     }).catch(err=>{
       console.log(err);  
     });
-    */
+    
   //******************************************************************************** */
-          this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
+/*          this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
           .subscribe(data=>{
             this.list=data;
             console.log('Los datos son: ' ,data);
@@ -57,7 +56,7 @@ export class MenuPage {
             console.log('platos completados'+ this.list);
           }
 
-        );
+        );*/
         /*this.getdata();*/
   //******************************************************************************** */
     

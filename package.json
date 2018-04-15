@@ -32,18 +32,19 @@
     "@ionic/storage": "2.0.1",
     "@types/google-maps": "^3.2.0",
     "body-parser": "^1.18.2",
-    "cordova-android": "~6.3.0",
+    "cordova-android": "6.3.0",
+    "cordova-android-play-services-gradle-release": "^1.3.0",
     "cordova-plugin-badge": "^0.8.7",
     "cordova-plugin-calendar": "^5.0.0",
     "cordova-plugin-compat": "^1.2.0",
-    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-geolocation": "^2.4.3",
-    "cordova-plugin-googlemaps": "^2.0.11",
+    "cordova-plugin-googlemaps": "^2.2.9",
     "cordova-plugin-inappbrowser": "^2.0.2",
-    "cordova-plugin-ionic-webview": "^1.1.16",
+    "cordova-plugin-ionic-webview": "^1.2.0",
     "cordova-plugin-local-notification": "^0.9.0-beta.2",
-    "cordova-plugin-splashscreen": "^4.0.3",
-    "cordova-plugin-whitelist": "^1.3.1",
+    "cordova-plugin-splashscreen": "^4.1.0",
+    "cordova-plugin-whitelist": "^1.3.3",
     "express": "^4.16.3",
     "intl": "^1.2.5",
     "ionic-angular": "3.7.1",
@@ -71,7 +72,9 @@
       },
       "cordova-plugin-googlemaps": {
         "API_KEY_FOR_ANDROID": "AIzaSyDoy1cwDi2NhkuBQcNaltnCjtsm-Wy-muk",
-        "API_KEY_FOR_IOS": "AIzaSyDoy1cwDi2NhkuBQcNaltnCjtsm-Wy-muk"
+        "API_KEY_FOR_IOS": "AIzaSyDoy1cwDi2NhkuBQcNaltnCjtsm-Wy-muk",
+        "PLAY_SERVICES_VERSION": "12.0.0",
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.0"
       },
       "ionic-plugin-keyboard": {},
       "cordova-plugin-whitelist": {},
@@ -98,7 +101,10 @@
       },
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-calendar": {},
-      "cordova-plugin-local-notification": {}
+      "cordova-plugin-local-notification": {},
+      "cordova-android-play-services-gradle-release": {
+        "PLAY_SERVICES_VERSION": "12.+"
+      }
     },
     "platforms": [
       "android"
