@@ -16,6 +16,7 @@ import { HomePage } from '../pages/home/home';
 import{ LabPage } from '../pages/lab/lab';
 import{ NosotrosPage } from '../pages/nosotros/nosotros';
 import{ ProyectosPage } from '../pages/proyectos/proyectos';
+import{ AyudaPage } from '../pages/ayuda/ayuda';
 //import {EventModalPage} from '../pages/event-modal/event-modal';
 @Component({
   templateUrl: 'app.html'
@@ -34,7 +35,8 @@ export class MyApp {
       {titulo:'Lab',component:LocallabPage,icon:'desktop'},
       {titulo:'Objetos Perdidos',component:ObjetoPage,icon:'cube'},
       {titulo:'SEDIPRO UCSS',component:NosotrosPage,icon:'people'},
-      {titulo:'Nuestros Proyectos',component:ProyectosPage,icon:'browsers'}
+      {titulo:'Nuestros Proyectos',component:ProyectosPage,icon:'browsers'},
+      {titulo:'Ayuda',component:AyudaPage,icon:'information-circle'}
       //{titulo:'Calcula Promedio',component:CalculadoraPage,icon:'calculator'},
       //{titulo:'PRUEBALAB',component:EventModalPage,icon:'desktop'}
     ];
