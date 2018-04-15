@@ -5,6 +5,7 @@ import { Platos } from '../../providers/platos/platos';
 /**importar estos datos obligatorio */
 import { Http,Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the MenuPage page.
  *
@@ -16,20 +17,25 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'page-menu',
   templateUrl: 'menu.html',
+  providers:[
+    Platos
+  ]
 })
 export class MenuPage {
   public userID:number;
   public list: any;
   newsData:any;
   loading:any;
-  posts = [];
+  posts :any;
   url:string;
-  data:string;
   platosusers: any[] = [];
  /* list = [];*/
-  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos) {
-    this.userID=this.navParams.get('userID');
-    console.log(this.userID);
+  //constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private menu:Platos,private http:Http
+  ,public alertCtrl: AlertController) {
+    
+  //  this.userID=this.navParams.get('userID');
+   // console.log(this.userID);
     /*MOSTRAR GET LIST DE PLATOS.TS */
   /*  users.getListPlato().then(results=>{
       console.log('platos completados'+ results);
@@ -38,7 +44,7 @@ export class MenuPage {
       console.log(err);  
     });
     */
-  
+  //******************************************************************************** */
           this.http.get('https://whispering-coast-35310.herokuapp.com/v_menu').map(res => res.json().rows)
           .subscribe(data=>{
             this.list=data;
@@ -52,8 +58,9 @@ export class MenuPage {
           }
 
         );
-  
-    /*this.getdata();*/
+        /*this.getdata();*/
+  //******************************************************************************** */
+    
     
   }
 
@@ -74,12 +81,20 @@ export class MenuPage {
       )
     
     console.log(this.platosusers);*/
-    this.loadPlatos();
+  /*  this.menu.getmenu().subscribe(data=>{
+      console.log(data);
+    })*/
   }
 
-  loadPlatos(){
-    
-  }
+
+/*showError(title, msg) {
+  let alert = this.alertCtrl.create({
+    title: title,
+    subTitle: msg,
+    buttons: ['Close']
+  });
+  alert.present();
+}*/
  /* getdata(){
     this.CardsService.getJsonData().subscribe(
       result => {

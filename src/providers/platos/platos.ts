@@ -2,13 +2,20 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { Platform } from 'ionic-angular'
 @Injectable()
 export class Platos {
   //list = [];
   //public list: any;
-  constructor(private http: Http) {
+  basepath="/herokuapi"
+  constructor(private http: Http,private _platform:Platform) {
+
+ /*   if(this._platform.is("cordova")){
+      this.basepath="https://whispering-coast-35310.herokuapp.com";
+    }
+
     console.log('Hello PlatosProvider Provider');
-  }
+  }*/
 
 // METODO PARA CONECTAR CON LA BASE DE DATOS 
 //**************************************************************************
@@ -103,4 +110,10 @@ getListPlato() {
     })
   }
 */
+//*************************************************************** */
+/*getmenu(){
+  return this.http.get(`${this.basepath}/v_menu`);
+}*/
+//*************************************************************** */
+}
 }
