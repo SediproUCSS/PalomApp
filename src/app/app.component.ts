@@ -31,7 +31,7 @@ export class MyApp {
       {titulo:'Inicio',component:InicioPage,icon:'home'},
       {titulo:'Mapa',component:MapaPage,icon:'pin'},
       {titulo:'Cafeteria',component:MenuPage,icon:'pizza'},
-      {titulo:'Lab',component:LocallabPage,icon:'desktop'},
+      {titulo:'Laboratorios Disponibles',component:LocallabPage,icon:'desktop'},
       {titulo:'Objetos Perdidos',component:ObjetoPage,icon:'cube'},
       {titulo:'SEDIPRO UCSS',component:NosotrosPage,icon:'people'},
       {titulo:'Nuestros Proyectos',component:ProyectosPage,icon:'browsers'}
@@ -43,10 +43,10 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       
       statusBar.styleDefault();
-      //splashScreen.hide();
+      splashScreen.hide();
       //timer(3000).subscribe(()=>this.showSplash=false)
-      let splash = modalCtrl.create(HomePage);
-      splash.present();
+      //let splash = modalCtrl.create(HomePage);
+      //splash.present();
     });
       
   }

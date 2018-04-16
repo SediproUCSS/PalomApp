@@ -4,6 +4,14 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="./assets/imgs/PalomApp.svg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
 
 <ion-header>
 
@@ -17,24 +25,7 @@
 </ion-header>
  
 <ion-content padding>
-  <!--div onclick="window.open('www.google.com', '_self',); return false;">
-    <ion-icon ios="logo-youtube" md="logo-youtube" style="color: red;"></ion-icon>
-  </div>
-  <h1>Bienvenido Papu ! </h1>
-  <p>Este es una aplicacion llamada PalomApp</p>   
-  <div class="list">
-      <a class="item" onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_self',); return false;">
-        
-        <ion-icon ios="logo-youtube" md="logo-youtube" style="color: red;"></ion-icon>
-      </a>
-    <br/>
-      <a class="item" href="#" onclick="window.open('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html', '_system', 'location=yes'); return false;">
-        Abrir Noticias en la pagina web
-    </a>
-  </div
-  <button ion-button (click)="openWithSystemBrowser('http://www.ucss.edu.pe/relaciones-internacionales/orientacion-noticias.html')">
-    <ion-icon name="logo-facebook"></ion-icon>
-  </button>-->
+ 
 </ion-content>
 
 <ion-footer>

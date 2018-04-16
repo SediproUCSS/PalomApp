@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser , InAppBrowserOptions } from '@ionic-native/in-app-browser';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { ViewController } from 'ionic-angular';
+import { timer } from 'rxjs/observable/timer';
+import { StatusBar } from '@ionic-native/status-bar';
 /**
  * Generated class for the InicioPage page.
  *
@@ -32,11 +36,19 @@ export class InicioPage {
     presentationstyle : 'pagesheet',//iOS only 
     fullscreen : 'yes',//Windows only    
 };
+splash = true;
+tabBarElement: any;
   constructor(public navCtrl: NavController, public navParams: NavParams,private theInAppBrowser: InAppBrowser) {
-    
+    this.tabBarElement = document.querySelector('.tabbar');
   }
 
   ionViewDidLoad() {
+    //this.tabBarElement.style.display = 'none';
+     let tabBarElement = document.querySelector('.tabbar.show-tabbar'); if (tabBarElement != null) { this.tabBarElement.style.display = 'none';this.tabBarElement.style.display = 'flex';} // or whichever property which you want to access }
+     setTimeout(() => {
+       this.splash = false;
+       //this.tabBarElement.style.display = 'flex';
+     }, 4000);
     console.log('inicio cargado');
   }
 

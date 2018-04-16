@@ -9,9 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  showSplash=true;
+  //showSplash=true;
+
+  splash = true;
+  tabBarElement: any;
+  
   constructor(platform: Platform,public navCtrl: NavController,public splashScreen: SplashScreen,public viewCtrl: ViewController,statusBar: StatusBar,modalCtrl: ModalController) {
-    platform.ready().then(() => {
+    /*platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
@@ -19,9 +23,11 @@ export class HomePage {
       timer(3000).subscribe(()=>this.showSplash=false);
       //let splash = modalCtrl.create(HomePage);
       //splash.present();
-    });
+    });*/
+
+    this.tabBarElement = document.querySelector('.tabbar');
   }
-  ionViewDidEnter() {
+  /*ionViewDidEnter() {
     
        this.splashScreen.hide();
     
@@ -29,5 +35,14 @@ export class HomePage {
          this.viewCtrl.dismiss();
        }, 4000);
     
-     }
+     }*/
+     ionViewDidLoad() {
+      this.tabBarElement.style.display = 'none';
+     // let tabBarElement = document.querySelector('.tabbar.show-tabbar'); if (tabBarElement != null) { this.tabBarElement.style.display = 'none';} // or whichever property which you want to access }
+      setTimeout(() => {
+        this.splash = false;
+        this.tabBarElement.style.display = 'flex';
+      }, 4000);
+    }
+  
 }

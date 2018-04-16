@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GeolocationService } from '../services/geolocation.service';
 import { GoogleMaps } from '@ionic-native/google-maps';
-import { Http, HttpModule,} from '@angular/http';
+import { Http, HttpModule} from '@angular/http';
 import { Deeplinks }from '@ionic-native/deeplinks';
 import { InAppBrowser }from '@ionic-native/in-app-browser';
 import { Geolocation ,Geoposition } from '@ionic-native/geolocation';
