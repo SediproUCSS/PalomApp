@@ -6,23 +6,3 @@
 }
 
 
-{
-    "fecha": "LUNES",
-    "children": [
-        {
-            "id_laboratorio": "3",
-            "children": [
-                {
-                    "hor_ini": "05:00",
-                    "hor_fin": "10:00",
-                    "estado": "DISPONIBLE"
-                },
-                {
-                    "hor_ini": "05:00",
-                    "hor_fin": "10:00",
-                    "estado": "DISPONIBLE"
-                }
-            ]
-        }
-    ]
-}

@@ -36,7 +36,8 @@ export class MyApp {
       {titulo:'Objetos Perdidos',component:ObjetoPage,icon:'cube'},
       {titulo:'SEDIPRO UCSS',component:NosotrosPage,icon:'people'},
       {titulo:'Nuestros Proyectos',component:ProyectosPage,icon:'browsers'},
-      {titulo:'Ayuda',component:AyudaPage,icon:'information-circle'}
+      {titulo:'Ayuda',component:AyudaPage,icon:'information-circle'},
+      {titulo:'LAB PRUEBA',component:LaboratorioPage,icon:'desktop'}
       //{titulo:'Calcula Promedio',component:CalculadoraPage,icon:'calculator'},
       //{titulo:'PRUEBALAB',component:EventModalPage,icon:'desktop'}
     ];

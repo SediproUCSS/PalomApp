@@ -32,6 +32,7 @@ import {EventModalPage} from '../pages/event-modal/event-modal';
 import{ NosotrosPage } from '../pages/nosotros/nosotros';
 import{ ProyectosPage } from '../pages/proyectos/proyectos';
 import{ AyudaPage } from '../pages/ayuda/ayuda';
+
 /*import { CustomEventTitleFormatterProvider } from '../providers/custom-event-title-formatter/custom-event-title-formatter';
 import { CustomDateFormatterProvider } from '../providers/custom-date-formatter/custom-date-formatter';
 
@@ -66,7 +67,8 @@ import {NgCalendarModule} from 'ionic2-calendar';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCalendarModule
     /*BrowserAnimationsModule,
     CalendarModule.forRoot(),
     CalendarWeekHoursViewModule*/
