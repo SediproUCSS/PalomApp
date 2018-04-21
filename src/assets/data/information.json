@@ -7,13 +7,78 @@
                     "name": "LAB O1",
                     "children": [
                         {
-                            "name": "05:00",
+                            "name": "15:45",
+                            "information": "17:15",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O2",
+                    "children": [
+                        {
+                            "name": "08:30",
                             "information": "10:00",
                             "price": "DISPONIBLE"
                         },
                         {
-                            "name": "06:00",
+                            "name": "14:00",
+                            "information": "19:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O3",
+                    "children": [
+                        {
+                            "name": "08:30",
+                            "information": "13:30",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "15:45",
+                            "information": "17:15",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O4",
+                    "children": [
+                        {
+                            "name": "12:00",
+                            "information": "13:30",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "17:30",
+                            "information": "19:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O5",
+                    "children": [
+                        {
+                            "name": "08:30",
                             "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "14:30",
+                            "information": "19:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O7",
+                    "children": [
+                        {
+                            "name": "08:30",
+                            "information": "19:00",
                             "price": "DISPONIBLE"
                         }
                     ]
@@ -27,13 +92,8 @@
                     "name": "LAB O1",
                     "children": [
                         {
-                            "name": "05:00",
-                            "information": "10:00",
-                            "price": "DISPONIBLE"
-                        },
-                        {
-                            "name": "06:00",
-                            "information": "10:00",
+                            "name": "17:30",
+                            "information": "19:00",
                             "price": "DISPONIBLE"
                         }
                     ]
@@ -42,23 +102,8 @@
                     "name": "LAB 02",
                     "children": [
                         {
-                            "name": "05:00",
-                            "information": "10:00",
-                            "price": "DISPONIBLE"
-                        },
-                        {
-                            "name": "05:00",
-                            "information": "10:00",
-                            "price": "DISPONIBLE"
-                        },
-                        {
-                            "name": "05:00",
-                            "information": "10:00",
-                            "price": "DISPONIBLE"
-                        },
-                        {
-                            "name": "05:00",
-                            "information": "10:00",
+                            "name": "17:30",
+                            "information": "20:40",
                             "price": "DISPONIBLE"
                         }
                     ]
@@ -67,13 +112,43 @@
                     "name": "LAB 03",
                     "children": [
                         {
-                            "name": "05:00",
-                            "information": "10:00",
+                            "name": "10:15",
+                            "information": "15:30",
                             "price": "DISPONIBLE"
                         },
                         {
-                            "name": "05:00",
-                            "information": "10:00",
+                            "name": "17:30",
+                            "information": "20:40",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB 04",
+                    "children": [
+                        {
+                            "name": "08:30",
+                            "information": "11:45",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "14:00",
+                            "information": "19:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB 05",
+                    "children": [
+                        {
+                            "name": "10:15",
+                            "information": "11:45",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "14:00",
+                            "information": "19:00",
                             "price": "DISPONIBLE"
                         }
                     ]
@@ -87,13 +162,68 @@
                     "name": "LAB O1",
                     "children": [
                         {
-                            "name": "05:00",
+                            "name": "17:30",
+                            "information": "19:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O2",
+                    "children": [
+                        {
+                            "name": "08:30",
                             "information": "10:00",
                             "price": "DISPONIBLE"
                         },
                         {
-                            "name": "06:00",
+                            "name": "12:30",
+                            "information": "01:30",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O3",
+                    "children": [
+                        {
+                            "name": "08:30",
                             "information": "10:00",
+                            "price": "DISPONIBLE"
+                        },
+                        {
+                            "name": "12:00",
+                            "information": "14:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O4",
+                    "children": [
+                        {
+                            "name": "08:30",
+                            "information": "10:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O5",
+                    "children": [
+                        {
+                            "name": "08:30",
+                            "information": "19:00",
+                            "price": "DISPONIBLE"
+                        }
+                    ]
+                },
+                {
+                    "name": "LAB O7",
+                    "children": [
+                        {
+                            "name": "08:30",
+                            "information": "19:00",
                             "price": "DISPONIBLE"
                         }
                     ]

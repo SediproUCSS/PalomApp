@@ -32,12 +32,12 @@ export class MyApp {
       {titulo:'Inicio',component:InicioPage,icon:'home'},
       {titulo:'Mapa',component:MapaPage,icon:'pin'},
       {titulo:'Cafeteria',component:MenuPage,icon:'pizza'},
-      {titulo:'Laboratorios Disponibles',component:LocallabPage,icon:'desktop'},
+      {titulo:'Laboratorios Disponibles',component:LabPage,icon:'desktop'},
       {titulo:'Objetos Perdidos',component:ObjetoPage,icon:'cube'},
       {titulo:'SEDIPRO UCSS',component:NosotrosPage,icon:'people'},
       {titulo:'Nuestros Proyectos',component:ProyectosPage,icon:'browsers'},
       {titulo:'Ayuda',component:AyudaPage,icon:'information-circle'},
-      {titulo:'LAB PRUEBA',component:LaboratorioPage,icon:'desktop'}
+      //{titulo:'LAB PRUEBA',component:LaboratorioPage,icon:'desktop'}
       //{titulo:'Calcula Promedio',component:CalculadoraPage,icon:'calculator'},
       //{titulo:'PRUEBALAB',component:EventModalPage,icon:'desktop'}
     ];
