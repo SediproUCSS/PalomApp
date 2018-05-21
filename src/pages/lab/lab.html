@@ -9,47 +9,16 @@
 
 </ion-header>
 
+<ion-content class="card-background-page">
+  
+  <ion-card *ngFor="let laboratorio of list">
+    <img src="./assets/img_local/lc.jpg"/>
+    <div class="card-title">{{ laboratorio.id_laboratorio }}</div>
+    <div class="card-subtitle">{{laboratorio.hor_inio}} - {{laboratorio.hor_fin}}</div>
+    <div class="card-subtitle">{{laboratorio.fecha}}</div>
+    
 
-<ion-content>
-  <ion-list class="accordion-list">
-<!--PRIMER NIVEL-->
-    <ion-list-header *ngFor="let item of information; let i=index" no-lines no-padding>
-        <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
-            <ion-icon item-left name="arrow-forward" *ngIf="!item.open"></ion-icon>
-            <ion-icon item-left name="arrow-down" *ngIf="item.open"></ion-icon>
-              {{ item.name }}
-          </button>
-          <ion-list *ngIf="item.children && item.open" no-lines>
-            <!--SEGUNDO NIVEL-->
-                  <ion-list-header *ngFor="let child of item.children; let j = index" no-padding>
-                      <!-- Toggle Button -->
-                          <button ion-item (click)="toggleItem(i, j)" *ngIf="child.children" class="child" detail-none>
-                            <ion-icon item-left name="add" *ngIf="!child.open"></ion-icon>
-                            <ion-icon item-left name="close" *ngIf="child.open"></ion-icon>
-                            {{ child.name }}
-                          </button>
-                  <!-- Direct Add Button as Fallback -->
-                          <ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
-                              <h2>{{ child.name }}</h2>
-                              <p text-lowercase>{{ child.information }}</p>
-                              <button ion-button outline item-end (click)="buyItem(child)">{{ child.price }}</button>
-                          </ion-item>
+  </ion-card>
 
-                          <ion-list *ngIf="child.children && child.open">
-                              <!-- Third Level -->
-                              <ion-item *ngFor="let item of child.children; let k = index" detail-none class="child-item" text-wrap>
-                                <h2>{{ item.name }}</h2>
-                                <h2>{{ item.information }}</h2>
-                                <!-- Direct Add Button -->
-                                <button ion-button outline item-end (click)="buyItem(item)">{{ item.price }}</button>
-                              </ion-item>
-                            </ion-list>
-
-                  </ion-list-header>
-          </ion-list>
-    </ion-list-header>
-  </ion-list>
-</ion-content>
-
-
+  </ion-content>
 

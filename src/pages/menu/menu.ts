@@ -30,7 +30,7 @@ export class MenuPage {
   url:string;
   platosusers: any[] = [];
  /* list = [];*/
-  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos) {
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos,public alertCtrl: AlertController) {
 
     
   //  this.userID=this.navParams.get('userID');
@@ -40,6 +40,12 @@ export class MenuPage {
       console.log('platos completados'+ results);
       this.list=results;
     }).catch(err=>{
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: err.message,
+        buttons: ['Aceptar']
+      });
+      alert.present();
       console.log(err);  
     });
     
