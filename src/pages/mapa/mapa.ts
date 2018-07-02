@@ -120,7 +120,7 @@ loadMap() {
           // Now you can use all methods safely.
           this.map.addMarker({
               title: 'LOCAL CENTRAL',
-              icon: 'assets/imgs/marc.png',
+              icon: 'assets/imgs/Marker.png',
               animation: 'DROP',
               position: {
                 lat: -12.0000527,
@@ -129,7 +129,7 @@ loadMap() {
             }),
             this.map.addMarker({
               title: 'GONZALES PRADA',
-              icon: 'assets/imgs/marc.png',
+              icon: 'assets/imgs/Marker.png',
               animation: 'DROP',
               position: {
                 lat: -11.99537937,
@@ -138,7 +138,7 @@ loadMap() {
             }),
             this.map.addMarker({
               title: 'GLOBO TERRÁQUEO',
-              icon: 'assets/imgs/marc.png',
+              icon: 'assets/imgs/Marker.png',
               animation: 'DROP',
               position: {
                 lat: -11.99867550450735,
