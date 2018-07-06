@@ -17,6 +17,8 @@ import{ LabPage } from '../pages/lab/lab';
 import{ NosotrosPage } from '../pages/nosotros/nosotros';
 import{ ProyectosPage } from '../pages/proyectos/proyectos';
 import{ AyudaPage } from '../pages/ayuda/ayuda';
+
+import { AlertController } from 'ionic-angular';
 //import {EventModalPage} from '../pages/event-modal/event-modal';
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +28,7 @@ export class MyApp {
   public rootPage:any;
   public pages: Array<{titulo: string,component: any, icon: string}>;
   showSplash=true;
-  constructor(platform: Platform,  statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController) {
+  constructor(public alertCtrl: AlertController,platform: Platform,  statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController) {
     this.rootPage = InicioPage;
     this.pages= [
       {titulo:'Inicio',component:InicioPage,icon:'home'},
@@ -53,7 +55,14 @@ export class MyApp {
     });
       
   }
-  
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'AVISO',
+      subTitle: '-La información disponible está sujeto a cambios, los objetos perdidos será recogidos en laboratorio 2.',
+      buttons: ['ACEPTAR']
+    });
+    alert.present();
+  }
   goToPage(page){
     this.nav.setRoot(page);
     console.log('pagina cargada');

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Laboratorios } from '../../providers/laboratorios/laboratorios';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the LaboratorioPage page.
  *
@@ -22,7 +23,7 @@ export class LabPage {
   loading:any;
   posts = [];
   information:any[];
-  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Laboratorios) {
+  constructor(public alertCtrl: AlertController ,private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Laboratorios) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
     //MOSTRAR GET LIST DE laborarotios.ts 
@@ -59,8 +60,14 @@ export class LabPage {
     
     
   }
-
-  
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
   ionViewDidLoad() {
     console.log('laboratorio cargado');
   }

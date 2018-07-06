@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ObjetoProvider } from '../../providers/objeto/objeto';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the ObjetoPage page.
  *
@@ -21,7 +22,7 @@ export class ObjetoPage {
   newsData:any;
   loading:any;
   posts = [];
-  constructor(private http:Http,public navCtrl: NavController, public navParams: NavParams,users: ObjetoProvider) {
+  constructor(public alertCtrl: AlertController,private http:Http,public navCtrl: NavController, public navParams: NavParams,users: ObjetoProvider) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
     /*MOSTRAR GET LIST DE PLATOS.TS */
@@ -31,6 +32,16 @@ export class ObjetoPage {
     }).catch(err=>{
       console.log(err);  
     });
+    this.showAlert();
+  }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'AVISO',
+      subTitle: 'Los objetos serán recogidos en Laboratorio 2',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {

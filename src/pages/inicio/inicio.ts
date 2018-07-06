@@ -5,6 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ViewController } from 'ionic-angular';
 import { timer } from 'rxjs/observable/timer';
 import { StatusBar } from '@ionic-native/status-bar';
+import { AlertController } from 'ionic-angular';
+
+
 /**
  * Generated class for the InicioPage page.
  *
@@ -38,8 +41,17 @@ export class InicioPage {
 };
 splash = true;
 tabBarElement: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private theInAppBrowser: InAppBrowser) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private theInAppBrowser: InAppBrowser,public alertCtrl: AlertController) {
     this.tabBarElement = document.querySelector('.tabbar');
+  }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Laboratorios } from '../../providers/laboratorios/laboratorios';
 import 'rxjs/add/operator/map';
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the LaboratorioPage page.
  *
@@ -30,7 +31,7 @@ export class LaboratorioPage {
       currentDate: new Date()
   }; // these are the variable used by the calendar.
 
-  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public laboratorios: Laboratorios) {
+  constructor(public alertCtrl: AlertController, private http:Http, public navCtrl: NavController, public navParams: NavParams,public laboratorios: Laboratorios) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
     /**MOSTRAR GET LIST DE PLATOS.TS 
@@ -58,6 +59,14 @@ export class LaboratorioPage {
         
     /*this.getdata();*/
     
+  }
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
                 loadEvents() {

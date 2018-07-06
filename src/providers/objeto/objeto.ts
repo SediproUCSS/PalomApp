@@ -16,7 +16,7 @@ export class ObjetoProvider {
   }
   public getListObjeto(){
     return new Promise((resolve, reject)=>{
-      this.http.get('assets/data/objeto.json').map(res => res.json())
+      this.http.get('https://whispering-coast-35310.herokuapp.com/objetosperdidos').map(res => res.json().rows)
       .subscribe((data:any = [])=>{
         console.log('Fetch data objetos: ', data.length);
   

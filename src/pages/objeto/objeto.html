@@ -16,15 +16,15 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card *ngFor="let objeto of list" >
-    <img src="./assets/objetos/{{ objeto.img }}"/>
+<ion-content padding windows="showAlert()">
+  <ion-card *ngFor="let objetosperdidos of list" >
+    <img src="{{ objetosperdidos.img }}"/>
     <ion-card-content  >
         <ion-card-title>
-          {{ objeto.nom_objeto }}
+          {{ objetosperdidos.nom_objeto }}
         </ion-card-title>
-      <p>{{ objeto.descripcion }}</p>
-      <p><b>{{objeto.cod_alumno}}</b></p>
+      <p>{{ objetosperdidos.descripcion }}</p>
+      <p><b>recogido por: {{objetosperdidos.cod_alumno}}</b></p>
     </ion-card-content>
   </ion-card>
 

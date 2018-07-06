@@ -27,9 +27,10 @@ map: GoogleMap;
 public userID:number;
   @ViewChild('map') element;
   constructor(private http:Http, public navCtrl: NavController, 
-    public navParams: NavParams,public geolocation:Geolocation) {
+    public navParams: NavParams,public geolocation:Geolocation,private googleMaps: GoogleMaps) {
       this.userID=this.navParams.get('userID');
       console.log("usuario"+this.userID);
+      //this.loadMap();
   }
 //ngAfterViewInit(){
 //this.geolocationNative();
@@ -98,20 +99,20 @@ loadMap(position:Geoposition){
 
 
 loadMap() {
-  
+  //this.map = GoogleMaps.create(this.element.nativeElement);
       let mapOptions: GoogleMapOptions = {
         camera: {
           target: {
-            lat: -12.0000527,
-            lng: -77.0638797
+            lat: -11.998870367177533,
+            lng: -77.0644462108612
           },
-          zoom: 20,
-          tilt: 10
+          zoom: 13,
+          tilt: 30
         }
       };
   
-      this.map = GoogleMaps.create(this.element.nativeElement);
-  
+     //this.map = GoogleMaps.create(this.element.nativeElement);
+     this.map = GoogleMaps.create('map', mapOptions);
       // Wait the MAP_READY before using any methods.
       this.map.one(GoogleMapsEvent.MAP_READY)
         .then(() => {
