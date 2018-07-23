@@ -103,7 +103,8 @@ import {NgCalendarModule} from 'ionic2-calendar';
     Deeplinks,
     InAppBrowser,
     HomePage,
-    LocalProvider,Laboratorios
+    Laboratorios,
+    LocalProvider
    /* CustomEventTitleFormatterProvider,
     CustomDateFormatterProvider*/
   ]

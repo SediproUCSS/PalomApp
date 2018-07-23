@@ -31,7 +31,7 @@ export class Laboratorios {
   // METODO PARA CONECTAR CON EL JSON LOCAL (CARPETA ASSETS/DATA)
   public getListLaboratorio(){
     return new Promise((resolve, reject)=>{
-      this.http.get('https://whispering-coast-35310.herokuapp.com/laboratorio').map(res => res.json())
+      this.http.get('https://whispering-coast-35310.herokuapp.com/disponibilidad').map(res => res.json().rows)
       .subscribe((data:any = [])=>{
         console.log('Fetch data contactos: ', data.length);
         resolve(data);

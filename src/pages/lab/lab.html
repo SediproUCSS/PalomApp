@@ -1,24 +1,36 @@
-<ion-header>
-
-  <ion-navbar color="PalomApp">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Laboratorios Disponibles</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-<ion-content class="card-background-page" >
+<ion-header >
   
-  <ion-card *ngFor="let laboratorio of list">
-    <img src="./assets/img_local/lc.jpg"/>
-    <div class="card-title">Laboratorio {{ laboratorio.id }}</div>
-    <div class="card-subtitle">{{laboratorio.hor_ini}} - {{laboratorio.hor_fin}}</div>
-    <div class="card-subtitle">{{laboratorio.fecha}}</div>
-    
-
-  </ion-card>
+        <ion-navbar color="PalomApp">
+  
+              <button ion-button menuToggle>
+  
+                  <ion-icon name="menu">  </ion-icon>
+  
+              </button>
+  
+              <ion-title>Laboratorios Perdidos</ion-title>
+  
+        </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-card *ngFor="let disponibilidad of list" >
+  
+          <!--<img src="./assets/imagenPlatos/{{v_menu.img_plato }}"/>-->
+  
+              <ion-card-content  >
+  
+                <ion-card-title>Laboratorio {{ disponibilidad.id_laboratorio }}</ion-card-title>
+  
+                    <p>{{disponibilidad.fecha | date: 'fullDate' | uppercase}}</p>
+  
+                    <button ion-button color="PalomApp">Horario : {{disponibilidad.hor_ini}} - {{disponibilidad.hor_fin}}</button>
+  
+              </ion-card-content>
+  
+      </ion-card>
 
   </ion-content>
-
+  

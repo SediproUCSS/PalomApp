@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ObjetoProvider } from '../../providers/objeto/objeto';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { AlertController } from 'ionic-angular';
+import { AlertController,LoadingController } from 'ionic-angular';
 /**
  * Generated class for the ObjetoPage page.
  *
@@ -22,7 +22,7 @@ export class ObjetoPage {
   newsData:any;
   loading:any;
   posts = [];
-  constructor(public alertCtrl: AlertController,private http:Http,public navCtrl: NavController, public navParams: NavParams,users: ObjetoProvider) {
+  constructor(public alertCtrl: AlertController,private http:Http,public navCtrl: NavController, public navParams: NavParams,users: ObjetoProvider,public loadingCtrl: LoadingController) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
     /*MOSTRAR GET LIST DE PLATOS.TS */
@@ -32,7 +32,8 @@ export class ObjetoPage {
     }).catch(err=>{
       console.log(err);  
     });
-    this.showAlert();
+    //this.showAlert();
+    this.cargando();
   }
 
   showAlert() {
@@ -43,7 +44,14 @@ export class ObjetoPage {
     });
     alert.present();
   }
-
+  cargando(){
+    let loader=this.loadingCtrl.create({
+      spinner:"bubbles",
+      content:"Los objetos serán recogidos en laboratorio 2",
+      duration:3000
+    });
+    loader.present();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ObjetoPage');
   }

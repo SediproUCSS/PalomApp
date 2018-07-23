@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Laboratorios } from '../../providers/laboratorios/laboratorios';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { AlertController } from 'ionic-angular';
+import { AlertController, LoadingController } from 'ionic-angular';
 /**
  * Generated class for the LaboratorioPage page.
  *
@@ -23,16 +23,19 @@ export class LabPage {
   loading:any;
   posts = [];
   //information:any[];
-  constructor(public alertCtrl: AlertController ,private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Laboratorios) {
+  constructor(public alertCtrl: AlertController ,private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Laboratorios,public loadingCtrl: LoadingController) {
+    
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
     //MOSTRAR GET LIST DE laborarotios.ts 
     users.getListLaboratorio().then(results=>{
       console.log('labs completados'+results);
       this.list=results;
+    
       
     }).catch(err=>{
       console.log(err);
+      
     });
 //dasdasdas
 
@@ -57,10 +60,18 @@ export class LabPage {
         );
   
     /*this.getdata();*/
-    
+    this.cargando();
     
   }
-
+cargando(){
+  let loader=this.loadingCtrl.create({
+    spinner:"bubbles",
+    content:"cargando",
+    duration:3000
+  });
+  loader.present();
+}
+  
   ionViewDidLoad() {
     console.log('laboratorio cargado');
   }

@@ -5,7 +5,7 @@ import { Platos } from '../../providers/platos/platos';
 /**importar estos datos obligatorio */
 import { Http,Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
-import { AlertController } from 'ionic-angular';
+import { AlertController, LoadingController } from 'ionic-angular';
 /**
  * Generated class for the MenuPage page.
  *
@@ -30,12 +30,13 @@ export class MenuPage {
   url:string;
   platosusers: any[] = [];
  /* list = [];*/
-  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos,public alertCtrl: AlertController) {
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,public users: Platos,public alertCtrl: AlertController,public loadingCtrl: LoadingController) {
 
     
   //  this.userID=this.navParams.get('userID');
    // console.log(this.userID);
     /*MOSTRAR GET LIST DE PLATOS.TS */
+ 
     users.getListPlato().then(results=>{
       console.log('platos completados'+ results);
       this.list=results;
@@ -47,6 +48,7 @@ export class MenuPage {
       });
       alert.present();
       console.log(err);  
+      
     });
     
   //******************************************************************************** */
@@ -65,7 +67,7 @@ export class MenuPage {
         );*/
         /*this.getdata();*/
   //******************************************************************************** */
-    
+    this.cargando();
     
   }
 
@@ -73,6 +75,15 @@ export class MenuPage {
     this.navCtrl.push(PlatoPage, { menuID:menuID });
   }
 */
+cargando(){
+  let loader=this.loadingCtrl.create({
+    spinner:"bubbles",
+    content:"cargando",
+    duration:3000
+  });
+  loader.present();
+}
+  
   ionViewDidLoad() {
     
   /*    this.users.getListPlato()
