@@ -22,7 +22,7 @@ export class LabPage {
   newsData:any;
   loading:any;
   posts = [];
-  information:any[];
+  //information:any[];
   constructor(public alertCtrl: AlertController ,private http:Http, public navCtrl: NavController, public navParams: NavParams,users: Laboratorios) {
     this.userID=this.navParams.get('userID');
     console.log(this.userID);
@@ -60,14 +60,7 @@ export class LabPage {
     
     
   }
-  showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-      buttons: ['OK']
-    });
-    alert.present();
-  }
+
   ionViewDidLoad() {
     console.log('laboratorio cargado');
   }

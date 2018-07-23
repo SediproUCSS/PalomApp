@@ -34,7 +34,6 @@ export class Laboratorios {
       this.http.get('https://whispering-coast-35310.herokuapp.com/laboratorio').map(res => res.json())
       .subscribe((data:any = [])=>{
         console.log('Fetch data contactos: ', data.length);
-  
         resolve(data);
       });
     })
