@@ -17,7 +17,7 @@ import{ LabPage } from '../pages/lab/lab';
 import{ NosotrosPage } from '../pages/nosotros/nosotros';
 import{ ProyectosPage } from '../pages/proyectos/proyectos';
 import{ AyudaPage } from '../pages/ayuda/ayuda';
-
+import { EquipoPage } from '../pages/equipo/equipo';
 import { AlertController } from 'ionic-angular';
 //import {EventModalPage} from '../pages/event-modal/event-modal';
 @Component({
@@ -39,6 +39,7 @@ export class MyApp {
       {titulo:'SEDIPRO UCSS',component:NosotrosPage,icon:'people'},
       {titulo:'Nuestros Proyectos',component:ProyectosPage,icon:'browsers'},
       {titulo:'Ayuda',component:AyudaPage,icon:'information-circle'},
+      {titulo:'Desarrolladores',component:EquipoPage,icon:'people'}
       //{titulo:'LAB PRUEBA',component:LaboratorioPage,icon:'desktop'}
       //{titulo:'Calcula Promedio',component:CalculadoraPage,icon:'calculator'},
       //{titulo:'PRUEBALAB',component:EventModalPage,icon:'desktop'}

@@ -32,7 +32,10 @@ import {EventModalPage} from '../pages/event-modal/event-modal';
 import{ NosotrosPage } from '../pages/nosotros/nosotros';
 import{ ProyectosPage } from '../pages/proyectos/proyectos';
 import{ AyudaPage } from '../pages/ayuda/ayuda';
-
+import { LOCALE_ID } from '@angular/core';
+import { EquipoPage } from '../pages/equipo/equipo';
+import es from '@angular/common/locales/es';
+//import { registerLocaleData } from '@angular/common';
 /*import { CustomEventTitleFormatterProvider } from '../providers/custom-event-title-formatter/custom-event-title-formatter';
 import { CustomDateFormatterProvider } from '../providers/custom-date-formatter/custom-date-formatter';
 
@@ -59,7 +62,8 @@ import {NgCalendarModule} from 'ionic2-calendar';
     EventModalPage,
     NosotrosPage,
     ProyectosPage,
-    AyudaPage
+    AyudaPage,
+    EquipoPage
     
 
   ],
@@ -88,12 +92,14 @@ import {NgCalendarModule} from 'ionic2-calendar';
     CalculadoraPage,
     NosotrosPage,
     ProyectosPage,
-    AyudaPage
+    AyudaPage,
+    EquipoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide:ErrorHandler, useClass: IonicErrorHandler},
+    {provide: LOCALE_ID, useValue: 'es-ES' },
     GeolocationService,
     Geolocation,
     GoogleMaps,
